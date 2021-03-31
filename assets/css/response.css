@@ -1,0 +1,400 @@
+@media only screen and (max-width:425px){
+    
+    /*---------slider-------------*/
+    #slider .carousel-caption{
+        position: absolute;
+        text-align: left;
+        font-size: x-small;
+        top: 15px;
+        left: 45px;
+    }
+    #slider .carousel-item img{
+        height: 150px;
+    }
+    #slider .carousel-caption h2{
+        font-size: small;
+        font-size: revert;
+    }
+    #slider .btn-primary{
+        font-size: small;
+        padding: 2px 10px;
+        margin-top: 7px;
+    }
+
+    /*----------marquee----------*/
+    .marquee h6{
+        font-size: small;
+        letter-spacing: 1px;
+    }
+
+    /*-------------softwares-solidworks-------*/
+    #softwares-solidworks .col-md-12{
+        width: 50%;
+    }
+    #softwares-solidworks .col-md-3 img{
+        width: 50% !important;
+    }
+
+    /*---------leadership---------*/
+    #leadership .row img{
+        padding-left: 30px;
+        padding-top: 10px;
+    }
+    #leadership .col-md-9{
+        padding-left: 0px;
+    }
+    /*-----------footer----------*/
+    #footer .col-md-3 a{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #footer .col-md-3 a:first-child{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+}
+@media only screen and (max-width:768px){
+    
+    #h1 h1{
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    /*-----------header----------*/
+    #header .navbar-brand{
+        padding-left: 0rem;
+    }
+    #header .dropdown-menu{
+        border-radius: 0px;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        border-top: 1px solid #000080;
+    }
+    #header .nav-item{
+        padding: 0.5em;
+    }
+    #header .company-name{
+        width: 75%;
+    }
+    #header .company-name img{
+        width: 100%;
+    }
+    #header .navbar-toggler img{
+        width: 70%;
+        height: 70%;
+    }
+    
+    /*--------------about----------*/
+    #about{
+        font-size: small;
+        padding-bottom: 10px;
+        margin: 10px 10px;
+    }
+    #about a{
+        font-size: small;
+    }
+    #about .about-content{
+        text-indent: 20px;
+        padding-top: 10px;
+    }
+    #about h2{
+        font-size: x-large;
+    }
+    #about .about-content i{
+        font-size: small;
+    }
+    #about .btn-primary{
+        font-size: small;
+        padding: 5px 5px;
+        margin-top: 10px;
+    }
+    #about .progress{
+        margin: 8px 0px;
+    }
+    #about .row .skills-bar{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    /*--------------contact-------------*/
+    #contact{
+        font-size: small;
+    }
+    * label{
+        margin-top: 10px;
+    }
+    #contact .row h2{
+        font-size: x-large;
+    }
+    #contact .col-md-3 i{
+        text-indent: 0px;
+    }
+    #contact .business-hours i{
+        text-indent: 0px;
+    }
+    #contact .col-sm-3{
+        width: 30%;
+    }
+    #contact .col-sm-9{
+        width: 70%;
+    }
+
+    /*-----------services---------*/
+    #services .container{
+        width: auto;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    #services .row a{
+        font-size: small;
+    }
+    #services .services-heading h2{
+        font-size: x-large;
+    }
+    #services .services-heading i{
+        font-size: small;
+    }
+    #services .col-md-3{
+        width: 50%;
+        height: 50%;
+    }
+    #services .parallax{
+        height: 250px;
+    }
+    #services .parallax .parallax-info{
+        padding: 3rem 0 0 10px;
+        font-size: small;
+    }
+    #services .parallax .parallax-info h2{
+        font-size: medium;
+    }
+    #services .parallax .parallax-info .parallax-style{
+        padding: 10px 10px 3px 10px;
+    }
+    #services .parallax .parallax-info .parallax-style img{
+        width: 11px !important;
+    }
+
+
+    /*---------------feature-----------*/
+    #feature .container{
+        width: auto;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    #feature h2{
+        font-size: x-large;
+    }
+    #feature .feature-heading h6{
+        font-size: small;
+    }
+    #feature .feature-flex h5{
+        font-size: small;
+    }
+    #feature .feature-flex > div{
+        width: auto;
+        margin: 5px;
+    }
+    #feature .feature-heading img{
+        width: 25px !important;
+    }
+    #feature .feature-flex img{
+        width: 12px !important;
+    }
+    #feature .row .col-md-3{
+        width: 50%;
+        padding: 0 3px 0 3px;
+    }
+    #feature .row .col-md-3 .wrap-item{
+        height: 100%;
+        border: 2px solid #000080;
+        border-radius: 5px;
+    }
+    #feature .row img{
+        width: 50px;
+    }
+    #feature .container .row{
+        padding: 0px 0px 30px 0px;
+    }
+    #feature .row h4{
+        font-size: medium;
+    }
+    #feature .container .row .col-xs-12{
+        margin-top: 20px;
+    }
+    
+
+    /*----------scrolldown----------*/
+    #scrolldown .row{
+        font-size: x-small;
+    }
+    #scrolldown .ab-top{
+        padding: 1px;
+    }
+    #scrolldown .row p{
+        margin-top: -10px;
+    }
+    #scrolldown .ag-box{
+        width: 50%;
+    }
+
+    /*---------softwares-lists----------*/
+    #softwares-list{
+        padding-top: 0px;
+    }
+    #softwares-list .ag-box{
+        font-size: small;
+    } 
+    #softwares-lists .col-xs-2{
+        width: 50%;
+        height: 50%;
+        margin-bottom: 10px;
+    }
+    #softwares-lists .row a{
+        font-size: small;
+    }
+    #softwares-lists .row p{
+        margin-top: 5px;
+    }
+
+    /*------------softwares-solidworks-------*/
+    #softwares-solidworks{
+        padding-top: 10px;
+    }
+    #softwares-solidworks p{
+        font-size: small;
+    }
+    #softwares-solidworks .row h2{
+        padding-top: 10px;
+        font-size: xx-large;
+    }
+    #softwares-solidworks .ag-box a{
+        font-size: small;
+    }
+    #softwares-solidworks h3, h4{
+        font-size: medium;
+    }
+    #softwares-solidworks h5{
+        font-size: medium;
+    }
+    #softwares-solidworks .row ul li{
+        text-indent: 10px;
+        font-size: small;
+    }
+    #softwares-solidworks .row p{
+        text-indent: 20px;
+    }
+
+    /*-----------leadership-------*/
+    #leadership {
+        font-size: small;
+        font-family: 'Source Serif Pro', serif;
+    }
+    #leadership .col-md-9{
+        border-left: none !important;
+        width: auto;
+    }
+    #leadership h2{
+        font-size: xx-large;
+        font-family: 'Aldrich', sans-serif;
+    }
+    #leadership .row h5{
+        font-size: medium;
+    }
+    #leadership .row p{
+        font-size: medium;
+    }
+    #leadership .col-xs-3{
+        width: 40%;
+    }
+    #leadership .col-xs-9{
+        width: 60%;
+    }
+
+    /*------------------projects-----------*/
+    #projects{
+        font-size: small;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #projects .row{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #projects .row p{
+        text-indent: 0px;
+    }
+    #projects .row h2{
+        font-size: xx-large;
+    }
+    #projects .row h4{
+        font-size: large;
+        font-weight: bold;
+    }
+    #projects .row h3, h4{
+        font-size: medium;
+    }
+    #projects .row h5, h6{
+        font-size: initial;
+    }
+    #projects .row img{
+        width: 100%;
+    }
+    /*------------profiles---------*/
+    #profiles{
+        font-size: small;
+    }
+    #profiles h2{
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /*----------footer---------*/
+    #footer .row h4{
+        font-size: large;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    #footer .row a{
+        font-size: small;
+        text-indent: 9px;
+        padding: 0px;
+    }
+    #footer .row img{
+        width: 100%;
+    }
+    #footer .btn-link{
+        font-size: x-small;
+    }
+    #footer .col-xs-3{
+        font-size: smaller;
+        width: 30%;
+        height: 30%;
+        padding: 0px;
+    }
+    #footer .col-xs-9{
+        font-size: smaller;
+        width: 70%;
+        height: 70%;
+        padding: 0px;
+    }
+    #footer .col-xs-6{
+        width: 50%;
+        padding: 0px;
+    }
+    #footer .col-md-3{
+        border-left: none !important;
+    }
+    #footer .col-md-4{
+        border-left: none !important;
+    }
+    #footer .copyright{
+        letter-spacing: 0px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        font-size: smaller;
+        text-align: center;
+    }
+}

@@ -1,0 +1,614 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Roboto&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+h1{
+    background-color: wheat;
+    font-family: 'Aldrich', sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000080;
+    letter-spacing: 1px;
+}
+
+/*-----------header-------------*/
+#header {
+    width: 100%;
+    background-color: #ff5800;
+}
+#header .company-name img{
+    width: auto;
+    height: auto;
+}
+#header a{
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14.4px;    
+}
+#header .dropdown-menu{
+    background-color: #56dbdb;
+}
+#header .dropdown:hover .dropdown-menu{
+    display: block;
+}
+#header .dropdown-item:hover{
+    text-decoration: underline;
+}
+#header .navbar-expand-lg a:hover{
+    color: #000080;
+} 
+#header .navbar-nav a:hover{
+    color: #000080;
+}
+#header .nav-item:last-child{
+    padding-right: 0em;
+}
+#header .nav-item{
+    padding: 0.3em;
+}
+#header .navbar-toggler-icon{
+    color: #000080;
+    width: 50px;
+    height: 50px;
+}
+
+/*-----------slider---------*/
+#slider{
+    background-color: antiquewhite;
+}
+#slider .carousel-indicators{
+    bottom: -20px;
+    visibility: visible;
+}
+#slider .carousel-caption{
+    text-align: left;
+    top: 20%;
+    font-family: 'Source Serif Pro', serif;
+    letter-spacing: 0.5px;
+}
+#slider .carousel-caption h2{
+    font-family: 'Aldrich', sans-serif;
+    text-shadow: 5px 5px 5px #279f9f;
+}
+#slider .btn-primary{
+    padding: 5px 20px;
+    margin-top: 20px;
+    background-color: #000080;
+    border-color: #000080;
+    font-family: 'Rajdhani', sans-serif;
+    border-radius: 5px;
+}
+/*--------------marquee----------*/
+.marquee{
+    padding-top: 5px;
+    color: black;
+    font-family: sans-serif;
+    font-size: larger;
+    visibility: visible;
+    -webkit-animation-duration: 1000ms; 
+    -moz-animation-duration: 1000ms; 
+    animation-duration: 1000ms;
+    -webkit-animation-delay: 300ms; 
+    -moz-animation-delay: 300ms; 
+    animation-delay: 300ms;
+}
+.marquee h2{
+    text-align: center;
+    color: black;
+}
+.marquee img{
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+}
+/*--------------About--------------*/
+#about {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;  
+    text-align: justify;
+    color: black;
+    margin-top: 20px;
+}
+#about .container{
+    background-color: #ffffff;
+}
+#about .container .row{
+    padding-top: 12px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+}
+#about h2{
+    border-bottom: 2px solid #000080;
+    width: fit-content;
+    color: black;
+    font-family: 'Aldrich', sans-serif;    
+}
+#about .btn-primary{
+    padding: 5px 20px;
+    margin-top: 20px;
+    background-color: #000080;
+    border-color: #000080;
+    font-family: 'Rajdhani', sans-serif;
+    border-radius: 5px;
+}
+#about .about-content{
+    padding-top: 10px;
+    text-indent: 50px;
+}
+#about .skills-bar p{
+    margin-bottom: 6px;
+    color: black;
+    font-weight: bold;
+}
+#about i{
+    font-size: large;
+}
+#about .progress-bar{
+    border-radius: 16px;
+    background-color: #000080;
+}
+#about .progress{
+    border-radius: 16px !important;
+    margin-bottom: 10px;
+    background-color: lightgrey;
+}
+#about .skills-bar h2{
+    color: black;
+    font-family: 'Aldrich', sans-serif;  
+}
+
+
+/*-----------services--------------*/
+#services .parallax{
+    background: url(../services-background.png) no-repeat left;
+    background-color: whitesmoke;
+    background-size: contain;
+    background-attachment: fixed;
+    height: 500px;
+    width: auto;
+    position: relative;
+    z-index: -1;
+}
+#services .parallax .parallax-info{
+    padding-left: 45rem;
+    padding-top: 8rem;
+    width: fit-content;
+}
+#services .parallax .parallax-info .parallax-style h2{
+    border-bottom: 2px solid #000080;
+}
+#services .parallax .parallax-info .parallax-style{
+    padding: 20px;
+    border-color: #000080;
+    background: linear-gradient(lightgrey, #ffffff);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+}
+#services .parallax .parallax-info .parallax-style ul{
+    list-style-type: none;
+}
+#services .parallax .parallax-info .parallax-style ul li{
+    font-family: 'Source Serif Pro', serif;
+    text-indent: 20px;
+}
+#services h2{
+    font-family: 'Aldrich', sans-serif;
+    color: black;
+}
+#services p{
+    font-family: 'Source Serif Pro', serif;
+}
+#services .container{
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+}
+#services .row a{
+    background-color: aliceblue;
+    text-align: center;
+    color: black;
+    font-family: 'Source Serif Pro', serif;
+}
+#services .row a:hover{
+    color: #000080;
+    text-decoration: underline;
+}
+#services .services-heading{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 0px 0 10px 0; 
+    margin: 0px 0 20px 0;
+}
+#services .services-heading i{
+    color: #000080;
+    font-family: 'Source Serif Pro', serif;
+}
+#services .box{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#services .box img{
+    width: 100%;
+    height: 100%;
+}
+#services .row a{
+    font-family: 'Aldrich', sans-serif;
+}
+#services .box .img-box{
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+}
+#services .box .img-box img{
+    max-width: 100%;
+    transition: transform 0.75s;
+}
+#services .box:hover .img-box img{
+    transform: scale(1.4);
+}
+
+/*---------------feature------------*/
+#feature{
+    margin-top: 30px;
+    font-family: 'Source Serif Pro', serif;
+    color: black;
+}
+#feature .container{
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0px 8px 0 rgba(225, 225, 225, 0.8), 0 0px 20px 0 rgba(0, 0, 128, 0.4);
+}
+#feature .container .feature-heading{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px 0 10px 0; 
+    margin: 20px 0 20px 0;
+}
+#feature .container .row{
+    background: aliceblue;
+    border-radius: 0px 0px 5px 5px;
+    padding: 30px 0px 30px 0px;
+}
+#feature .container h5{
+    font-style: italic;
+    font-family: 'Source Serif Pro', serif;
+    text-align: center;
+}
+#feature .container h6{
+    color: #000080;
+    font-style: italic;
+    font-family: 'Source Serif Pro', serif;
+    text-align: center;
+}
+#feature .container p{
+    font-family: 'Source Serif Pro', serif; 
+    text-align: center;
+}
+#feature h2{
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+}
+#feature h4{
+    font-family: 'Aldrich', sans-serif;
+}
+#feature .row .item-img{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#feature .feature-flex{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+#feature .feature-flex > div{
+    width: 48%;
+    margin: 10px;
+}
+#feature .feature-flex > div:nth-last-child(1){
+    width: 100%;
+}
+/* #feature .row .wrap-item{
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+} */
+
+
+/*---------------scrolldown-------------*/
+#scrolldown{
+    padding-top: 30px;
+    font-family: 'Source Serif Pro', serif;
+    background: whitesmoke;
+}
+#scrolldown .ab-top{
+    color: #000080;
+    padding-top: 20px;
+}
+#scrolldown .row{
+    text-align: center;
+    font-weight: bold;
+}
+#scrolldown .row p{
+    color: black;
+}
+#scrolldown .ag-box{
+    width: 100%;
+    height: 100%;
+}
+
+/*------------------softwares_solidworks-----------------*/
+#softwares-solidworks{
+    padding-top: 10px;
+    font-family: 'Source Serif Pro', serif;
+    color: black;
+}
+#softwares-solidworks .col-md-2{
+    background: #279f9f;
+}
+#softwares-solidworks .row h2{
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+    padding-top: 10px;
+    color: #000080 !important;
+}
+#softwares-solidworks h3, h4{
+    font-family: 'Aldrich', sans-serif;
+    color: black;
+}
+#softwares-solidworks h5{
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+}
+#softwares-solidworks .row a{
+    color: black;
+}
+#softwares-solidworks .row ul li{
+    text-indent: 30px;
+    text-align: justify;
+    list-style-type: none;
+}
+#softwares-solidworks .row p{
+    text-indent: 50px;
+    text-align: justify;
+}
+#softwares-solidworks .col-md-3 img{
+    width: 100%;
+}
+#softwares-solidworks .ag-box{
+    background-color: #279f9f !important;
+    height: fit-content;
+}
+/*----------------software_lists-----------*/
+#softwares-lists{
+    width: 100%;
+    font-family: 'Aldrich', sans-serif;
+}
+#softwares-lists .row img{
+    width: 100%;
+    height: 100%;
+}
+#softwares-lists .row a{
+    text-align: center;
+    color: black;
+    background-color: aliceblue;
+}
+#softwares-lists .row a:hover{
+    color: #000080;
+}
+#softwares-lists .col-md-2{
+    margin-top: 10px;
+}
+#softwares-lists .row p{
+    margin-top: 10px;
+}
+#softwares-lists .box{
+    text-align: center;
+    margin-bottom: 20px;
+}
+#softwares-lists .box img{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+}
+#softwares-lists .box .img-box{
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+}
+#softwares-lists .box .img-box img{
+    max-width: 100%;
+    transition: transform 2s;
+}
+#softwares-lists .box:hover .img-box img{
+    transform: scale(1.4);
+}
+/*----------------projects-----------*/
+#projects {
+    font-family: 'Source Serif Pro', serif;
+}
+#projects .row{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#projects .row img{
+    margin-bottom: 10px;
+}
+#projects h2{
+    font-family: 'Aldrich', sans-serif;
+    color: #000080;
+    text-align: center;
+    background-color: whitesmoke;
+    padding: 0px;
+    margin: 0px;
+}
+#projects .col-md-4{
+    background-color:#279f9f;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: fit-content;
+    margin-bottom: 10px;
+}
+#projects h6{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+#projects .row p{
+    text-indent: 30px;
+    text-align: justify;
+}
+#projects .row a{
+    text-align: center;
+}
+/*-------------contact--------------*/
+#contact {
+    font-family: 'Source Serif Pro', serif;
+}
+#contact h1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+    background-color: wheat;
+    color: #000080;
+}
+#contact h2{
+    font-family: 'Aldrich', sans-serif;
+    margin-top: 10px;
+}
+#contact .row a{
+    color: black;
+    text-decoration: underline;
+}
+#contact .col-md-3 i{
+    text-indent: 30px;
+}
+#contact .business-hours i{
+    text-indent: 30px;
+}
+#contact button{
+    width: 100%; 
+    font-family: 'Rajdhani', sans-serif; 
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/*--------------profiles-----------*/
+#profiles{
+    font-family: 'Source Serif Pro', serif;
+    color: black;
+}
+#profiles .swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#profiles .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 250px;
+    height: 380px;
+    background-color: wheat;
+    border: 1px solid black;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#profiles .info{
+    text-align: center;
+    color: black;
+}
+#profiles .info h5, h6{
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#profiles .info a{
+    padding-top: 0px;
+    color: black;
+}
+#profiles .info a:hover{
+    color: #000080;
+}
+#profiles .swiper-pagination{
+    position: relative;
+    bottom: 0px;
+}
+#profiles .img-box{
+    margin-top: -25px;
+}
+
+/*-----------------about-leadership-----------*/
+#leadership {
+    color: black;
+}
+#leadership .row a{
+    color: black;
+}
+#leadership h5{
+    font-family: 'Source Serif Pro', serif;
+}
+#leadership p{
+    font-family: 'Source Serif Pro', serif;
+}
+#leadership .row img{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+#leadership .col-md-9{
+    padding-left: 40px;
+    padding-top: 10px;
+}
+#leadership .btn{
+    margin: 0px;
+}
+
+/*----------------footer---------------*/
+#footer{
+    background: #56dbdb;
+    opacity: 1;
+    font-family: 'Source Serif Pro', serif;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#footer .row h4{
+    color: #000080;
+    font-family: 'Aldrich', sans-serif;
+}
+#footer .row p{
+    text-indent: 10px;
+}
+#footer .row a{
+    color: black;
+}
+#footer .row a:hover{
+    color: #000080;
+}
+#footer .btn-link{
+    font-size: x-large;
+}
+#footer .copyright{
+    letter-spacing: 1px;
+    padding-top: 30px;
+    text-align: right;
+}
+#footer .copyright a{
+    font-weight: bold;
+    color: #000080 !important;
+    font-family: 'Aldrich', sans-serif;
+}
+#footer .fa-whatsapp{
+    color: #000080;
+}
+
+
