@@ -11,5 +11,6 @@ urlpatterns = [
     path('service', services_view, name="services"),
     path('service/<str:id>', ser_det, name="services"),
     path('contact', contact_view),
-    path('softwares', softwares_view)
+    path('softwares', softwares_view),
+    path('base', base_view)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
