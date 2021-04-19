@@ -10,7 +10,7 @@
 
         <section id="softwares-solidworks">
             <div class="container">
-                <p><a href="index.html">Home</a> >> <a>Services</a></p>
+                <p><a href="{% url 'base' %}">Home</a> >> <a>Services</a></p>
             </div>
         </section>
 
@@ -18,13 +18,13 @@
             <div class="container-fluid home-product">
                 <div class="container">
                     <div class="row">
-                        {% for data in services%}
-                            {%if data.active%}
+                        {% for data in services %}
+                            {%if data.services_active%}
                             <div class="col-md-3 col-xs-6 box">
                                 <div class="img-box">
                                     <a href="{% url 'services' data.id%}">
                                      
-                                        <img src="{{data.images.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
+                                        <img src="{{data.thumb_image.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
                                     </a>
                                 </div>
                                 <br>

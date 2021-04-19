@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import need, services, values, contact, softwares, features, company, members, about
+from .models import need, services, values, contact, softwares, features, company, members, about, header
 
 def base_view(request):
     instance_1 = softwares.objects.all()
@@ -36,11 +36,11 @@ def base_view(request):
     return render(request, "base.html", context)
 
 def need_view(request):
-    instance = need.objects.all()
+    instance = features.objects.all()
     need_list = []
     for obj in instance:
         need_dict = {
-            "name": obj.name
+            "name": obj.content.split(",")
         }
         need_list.append(need_dict)
     context = {
@@ -51,24 +51,29 @@ def need_view(request):
 
 
 def ser_det(request, id):
-    ins = services.objects.get(pk=id)
-    name = ins.name
-    image = ins.thumb_image
-    description_1 = ins.description_1
-    description_2 = ins.description_2
-    role = ins.role
-    tools = ins.tools
+    instance = services.objects.get(pk=id)
+    instance_0 = services.objects.all()
+    instance_1 = header.objects.all()
+    instance_2 = softwares.objects.all()
+    name = instance.name
+    thumb_image = instance.thumb_image
+    description_1 = instance.description_1
+    description_2 = instance.description_2
+    role = instance.role.split(",")
+    tools = instance.tools.split(",")
     context = {
         "name": name,
-        "image":image,
+        "thumb_image": thumb_image,
         "description_1": description_1,
         "description_2": description_2,
         "role": role,
         "tools": tools,
-        "title": name
+        "title": name,
+        'services': instance_0,
+        'header': instance_1,
+        'softwares_head': instance_2
     }
-
-    return render(request, "index.html", context)
+    return render(request, "services-industrial-design.html", context)
 
 
 def contact_view(request):
@@ -104,26 +109,21 @@ def contact_view(request):
         'title': "form",
         "need": need_list,
         "bg": "grey"
-       
-        
-
     }
     return render(request, "form.html", context)
 
 def softwares_view(request):
-    instance_1 = softwares.objects.all()
+    instance_1 = softwares.objects.all()    
     softwares_list = []
     for obj_1 in instance_1:
         instance_2 = obj_1.head.all()
         head_list = []
         for obj_2 in instance_2:
-            # content = obj_2.content.split(",")
             head_dict = {
                 "head": obj_2.head,
                 "content": obj_2.content.split(",")
             }
             head_list.append(head_dict)
-            
         softwares_dict = {
             "name": obj_1.name,
             "head": head_list,
@@ -140,21 +140,27 @@ def softwares_view(request):
 
 def services_view(request):
     instance = services.objects.all()
-    service_list = []
-    for obj in instance:
-        service_dict = {
-            "name": obj.name,
-            "id": obj.pk,
-            "active": obj.services_active,
-            "images": obj.thumb_image
-        }
-        service_list.append(service_dict)    
+    instance_1 = header.objects.all()
+    instance_2 = softwares.objects.all()        
     context = {
-        "services": service_list,
+        "services": instance,
+        'header': instance_1,
+        'softwares_head': instance_2,
         "title": "Services",        
     }
-    print(services)
     return render(request, "services.html", context)
 
 
-
+def header_view(request):
+    instance = header.objects.all()
+    instance_1 = services.objects.all()
+    instance_2 = softwares.objects.all()
+    instance_3 = company.objects.all()
+    context = {
+        'header': instance,
+        'services': instance_1,
+        'softwares_head': instance_2,
+        'company': instance_3,
+        'title': "Home"
+    }
+    return render(request, "base.html", context)

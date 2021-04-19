@@ -8,14 +8,15 @@
 </head>
 <body>
 
-    {{key}}
     {{need}}
 <br><br>
-    <!--
-    {{name}}
-    
+    {% for data in key %}
+        {% for name in data.name %}
+                <p>{{name}}</p>
+        {%endfor%}
+
+    {%endfor%}
     <br>
-   {{name}}
    <br>
    
   {{image}}
@@ -25,7 +26,7 @@
     <h1>{{role}}</h1>{{tools}}
     <br>
     <h5>{{description_1}}</h5>
-    <h6>{{description_2}}</h6> -->
+    <h6>{{description_2}}</h6>
 
 
 {{softwares}}
@@ -35,7 +36,7 @@
 
 <br>
 <br><br><br><br>
-<a href="{% url 'services' %}">back</a>
+<a href="">back</a>
 
 </body>
 </html>

@@ -32,7 +32,7 @@ class about (models.Model):
         return self.heading
 
 class header (models.Model):
-    header_active = models.BooleanField(default=True)
+    # header_active = models.BooleanField(default=True)
     name = models.CharField(max_length=50)
     name_active = models.BooleanField(default=True)
 
@@ -88,7 +88,7 @@ class softwares (models.Model):
     thumb_image = models.ImageField()
     description_1 = models.TextField()
     description_2 = models.TextField()
-    softwares_active = models.BooleanField(default=True)
+    description_active = models.BooleanField(default=True)
     image_1 = models.ImageField()
     image_2 = models.ImageField()
     logo = models.ImageField()
@@ -108,11 +108,11 @@ class values (models.Model):
         return self.name
 
 class progress (models.Model):
-    name = models.ForeignKey('services', on_delete=models.CASCADE)
+    name = models.ForeignKey('services', on_delete=models.CASCADE, null=True)
     percentage = models.CharField(max_length=10)
 
     def __str__(self):
-        return self.percentage
+        return self.name
 
 class need (models.Model):
     name = models.CharField(max_length=100, default=True)

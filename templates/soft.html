@@ -25,10 +25,11 @@
                                         <img src="{{data.image.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
                                     </a>
                                 </div>
+                                <a href="">{{data.name}}</a>
                                 <br>
-                                {% for head in data.head%}
+                                {% for head in data.head %}
                                     <b><a href="">{{head.head}}</a></b>
-                                        {% for content in head.content%}
+                                        {% for content in head.content %}
                                             <p>{{content}}</p>
                                         {%endfor%}
                                 {%endfor%} 
