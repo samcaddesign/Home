@@ -61,6 +61,9 @@ def ser_det(request, id):
     description_2 = instance.description_2
     role = instance.role.split(",")
     tools = instance.tools.split(",")
+    image_1 = instance.image_1
+    image_2 = instance.image_2
+    image_active = instance.image_active
     context = {
         "name": name,
         "thumb_image": thumb_image,
@@ -69,6 +72,9 @@ def ser_det(request, id):
         "role": role,
         "tools": tools,
         "title": name,
+        "image_1": image_1,
+        "image_2": image_2,
+        "image_active": image_active,
         'services': instance_0,
         'header': instance_1,
         'softwares_head': instance_2

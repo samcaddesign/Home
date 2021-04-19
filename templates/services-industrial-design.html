@@ -8,7 +8,7 @@
                     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="background-color: wheat;">
-                                <img class="d-block w-100" src="images/serivices/services-industrial-design-image.png" alt="services-industrial-design"></img>
+                                <img class="d-block w-100" src="../static/images/serivices/services-industrial-design-image.png" alt="services-industrial-design"></img>
                             </div>
                         </div>
                     </div>
@@ -24,16 +24,17 @@
                         <h3>Services</h3>
                         <div class="row p-0">
                             <div class="col-md-12">
-                                <a style="color: white;">Industrial Design</a><br>
-                                <a href="services-civil&arch.html">Civil & Arch</a><br>
-                                <a href="services-drawing&drafting.html">Drawign & Drafting</a><br>
-                                <a href="services-electrical-design.html">Electrical Design</a><br>
+                                {% for data in services %}
+                                    {%if data.services_active %}
+                                        <a href="{% url 'services' data.id%}">{{data.name}}</a><br>
+                                    {%endif%}
+                                {%endfor%}
                             </div>
                             <div class="col-md-12">
-                                <a href="services-cad-simulation.html">CAD Simulation</a><br>
+                                <!-- <a href="services-cad-simulation.html">CAD Simulation</a><br>
                                 <a href="services-analysis-in-cad.html">Analysis in CAD</a><br>
                                 <a href="services-cam-simulation.html">CAM Simulation</a><br>
-                                <a href="services-nc-program.html">NC Programming</a><br>
+                                <a href="services-nc-program.html">NC Programming</a><br> -->
                             </div>
                         </div>
                     </div>
@@ -52,12 +53,15 @@
                             <li>Perfomance & Safety Analysis</li> -->
                         </ul>
                         <div class="row">
+                            
                             <div class="col-md-6 col-xs-12">
-                                <a><img src="images/serivices/services-industrial-design-image-1.jpg" class="w-100 py-3" alt="industrial-image-1"></img></a>
+                                <a><img src="{{image_1.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
                             </div>
+                            {% if image_active %}
                             <div class="col-md-6 col-xs-12">
-                                <a><img src="images/serivices/services-industrial-design-image-2.jpg" class="w-100 py-3" alt="industrial-image-1"></img></a>
+                                <a><img src="{{image_2.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
                             </div>
+                            {%endif%}
                         </div><br>
                         <h4>Leading Softwares in Industrial Design</h4>
                         <div class="row">
