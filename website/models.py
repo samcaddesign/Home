@@ -61,16 +61,19 @@ class marquee (models.Model):
 
 class services (models.Model):
     services_active = models.BooleanField(default=True)
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, null=True)
     thumb_image = models.ImageField()
     name_active = models.BooleanField(default=True)
     description_1 = models.TextField()
-    description_2 = models.TextField(null=True)
-    role = models.TextField()
+    description_2 = models.TextField(null=True, blank=True)
+    description_3 = models.TextField(null=True, blank=True)
+    head_1 = models.CharField(max_length=100, null=True)
+    head_1_info = models.TextField(null=True)
     image_active = models.BooleanField(default=True)
     image_1 = models.ImageField()
     image_2 = models.ImageField()
-    tools = models.TextField()
+    head_2 = models.CharField(max_length=100, null=True)
+    head_2_info = models.TextField(null=True)
 
     def __str__(self):
         return self.name
@@ -103,13 +106,6 @@ class values (models.Model):
     count = models.TextField()
     name = models.CharField(max_length=50)
     quote = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.name
-
-class progress (models.Model):
-    name = models.ForeignKey('services', on_delete=models.CASCADE, null=True)
-    percentage = models.CharField(max_length=10)
 
     def __str__(self):
         return self.name

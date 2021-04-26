@@ -1,5 +1,6 @@
 {% extends 'base.html'%}
 {%load static%}
+
 {%block content%}
     <body>
         <main>
@@ -18,7 +19,7 @@
 
         <section id="softwares-solidworks">
             <div class="container">
-                <p><a href="{% url 'base' %}">Home</a> >> <a href="{% url 'service' %}">Services</a> >> {{name}}</p>
+                <p><a href="{% url 'base' %}">Home</a> >> <a href="{% url 'services' %}">Services</a> >> {{name}}</p>
                 <div class="row">
                     <div class="col-md-3 col-xs-12 pt-3 py-3 ag-box fadeInLeft">
                         <h3>Services</h3>
@@ -26,7 +27,7 @@
                             <div class="col-md-12">
                                 {% for data in services %}
                                     {%if data.services_active %}
-                                        <a href="{% url 'services' data.id%}">{{data.name}}</a><br>
+                                        <a href="{% url 'services_id' data.id %}">{{data.name}}</a><br>
                                     {%endif%}
                                 {%endfor%}
                             </div>
@@ -42,18 +43,13 @@
                         <h2>{{name}}</h2>
                         <p>{{description_1}}</p>
                         <p>{{description_2}}</p>
-                        <h4>Perfomance Role</h4>
+                        <h4>{{head_1}}</h4>
                         <ul>
-                            {% for role in role %}
-                                <li>{{role}}</li>
+                            {% for head_1_info in head_1_info %}
+                                <li>{{head_1_info}}</li>
                             {%endfor%}
-                            <!-- <li>2D Designing & Drawing</li>
-                            <li>3D Modelling</li>
-                            <li>Prototyping</li>
-                            <li>Perfomance & Safety Analysis</li> -->
                         </ul>
-                        <div class="row">
-                            
+                        <div class="row">                            
                             <div class="col-md-6 col-xs-12">
                                 <a><img src="{{image_1.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
                             </div>
@@ -63,34 +59,15 @@
                             </div>
                             {%endif%}
                         </div><br>
-                        <h4>Leading Softwares in Industrial Design</h4>
-                        <div class="row">
-                            <div class="col-md-6 col-xs-12">
-                                <ul>
-                                    {%  for tools in tools %}
-                                        <li>{{tools}}</li>
-                                    {%endfor%}
-                                    <!-- <li>CREO</li>
-                                    <li>SOLIDWORKS</li>
-                                    <li>Unigraphics</li>
-                                    <li>ANSYS Workbench</li>
-                                    <li>CATIA</li> -->
-                                </ul>
-                            </div>
-                            <div class="col-md-6 col-xs-12">
-                                <ul>
-                                    <!-- <li>CATIA Kinematics</li>
-                                    <li>NX CAD</li>
-                                    <li>Solidworks Motion</li>
-                                    <li>CREO Simulate</li>
-                                    <li>Autodesk Inventor</li>
-                                    <li>Autodesk Fusion</li> -->
-                                </ul>
-                            </div>
-                        </div>
+                        <h4>{{head_2}}</h4>
+                        <ul>
+                            {% for head_2_info in head_2_info %}
+                                <li>{{head_2_info}}</li>
+                            {%endfor%}
+                        </ul>
                     </div>
                 </div>           
             </div>
         </section>
     </body>
-{%endblock content%}        
+{%endblock content%}

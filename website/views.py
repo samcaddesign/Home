@@ -1,40 +1,6 @@
 from django.shortcuts import render
 from .models import need, services, values, contact, softwares, features, company, members, about, header
 
-def base_view(request):
-    instance_1 = softwares.objects.all()
-    instance_2 = services.objects.all()
-    softwares_list = []
-    service_list = []
-    for obj_1 in instance_1:
-        instance_3 = obj_1.head.all()
-        head_list = []
-        for obj_3 in instance_3:
-            head_dict = {
-                "head": obj_3.head,
-                "content": obj_3.content.split(",")
-            }
-            head_list.append(head_dict)            
-        softwares_dict = {
-            "name": obj_1.name,
-            "head": head_list,
-            "image": obj_1.logo
-        }
-        softwares_list.append(softwares_dict)
-        for obj_2 in instance_2:
-            service_dict = {
-                "name": obj_2.name,
-                "id": obj_2.pk,
-                "active": obj_2.services_active,
-                "images": obj_2.thumb_image,
-                "softwares": softwares_list
-            }
-        service_list.append(service_dict) 
-    context = {
-        "services": service_list
-    }
-    return render(request, "base.html", context)
-
 def need_view(request):
     instance = features.objects.all()
     need_list = []
@@ -50,7 +16,7 @@ def need_view(request):
 
 
 
-def ser_det(request, id):
+def serives_id(request, id):
     instance = services.objects.get(pk=id)
     instance_0 = services.objects.all()
     instance_1 = header.objects.all()
@@ -59,8 +25,11 @@ def ser_det(request, id):
     thumb_image = instance.thumb_image
     description_1 = instance.description_1
     description_2 = instance.description_2
-    role = instance.role.split(",")
-    tools = instance.tools.split(",")
+    description_3 = instance.description_3
+    head_1 = instance.head_1
+    head_1_info = instance.head_1_info.split(";")
+    head_2 = instance.head_2
+    head_2_info = instance.head_2_info.split(";")
     image_1 = instance.image_1
     image_2 = instance.image_2
     image_active = instance.image_active
@@ -69,8 +38,11 @@ def ser_det(request, id):
         "thumb_image": thumb_image,
         "description_1": description_1,
         "description_2": description_2,
-        "role": role,
-        "tools": tools,
+        "description_3": description_3,
+        "head_1": head_1,
+        "head_1_info": head_1_info,
+        "head_2": head_2,
+        "head_2_info": head_2_info,
         "title": name,
         "image_1": image_1,
         "image_2": image_2,
@@ -79,7 +51,7 @@ def ser_det(request, id):
         'header': instance_1,
         'softwares_head': instance_2
     }
-    return render(request, "services-industrial-design.html", context)
+    return render(request, "services_id.html", context)
 
 
 def contact_view(request):
