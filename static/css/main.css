@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette|Roboto&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url('https://fonts.googleapis.com/css2?family=Andada&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@ h1{
 /*-----------header-------------*/
 #header {
     width: 100%;
-    background-color: #ff5800;
+    background-color: #20B2AA;
 }
 #header .company-name img{
     width: auto;
@@ -58,7 +60,8 @@ h1{
 
 /*-----------slider---------*/
 #slider{
-    background-color: antiquewhite;
+    padding: 0 0 10px 0;
+
 }
 #slider .carousel-indicators{
     bottom: -20px;
@@ -348,44 +351,53 @@ h1{
 /*------------------softwares_solidworks-----------------*/
 #softwares-solidworks{
     padding-top: 10px;
-    font-family: 'Source Serif Pro', serif;
     color: black;
-}
-#softwares-solidworks .col-md-2{
-    background: #279f9f;
+    font-family: 'Andada', serif;
+    font-size: 14px;
+    line-height: 27px;
 }
 #softwares-solidworks .row h2{
-    background-color: whitesmoke;
+    background-color: #20B2AA;
     text-align: center;
     font-family: 'Aldrich', sans-serif;
-    padding-top: 10px;
-    color: #000080 !important;
+    padding: 10px 0 10px 0;
 }
-#softwares-solidworks h3, h4{
+#softwares-solidworks h3, h4, h5{
     font-family: 'Aldrich', sans-serif;
     color: black;
-}
-#softwares-solidworks h5{
-    text-align: center;
-    font-family: 'Aldrich', sans-serif;
 }
 #softwares-solidworks .row a{
     color: black;
 }
+#softwares-solidworks .row p{
+    font-size: 16px !important;
+    letter-spacing: 0.7px;
+    text-indent: 50px;
+    text-align: justify;
+}
+#softwares-solidworks .row a:hover{
+    color: #000080;
+}
 #softwares-solidworks .row ul li{
+    color: black;
     text-indent: 30px;
     text-align: justify;
     list-style-type: none;
+    font-family: 'Andada', serif;
+    font-size: 16px !important;
+    letter-spacing: 0.7px;
 }
-#softwares-solidworks .row p{
-    text-indent: 50px;
-    text-align: justify;
+#softwares-solidworks .row ul li i{
+    color: #000080;
 }
 #softwares-solidworks .col-md-3 img{
     width: 100%;
 }
+#softwares-solidworks .col-md-9{
+    padding: 0 10px 0 20px;
+}
 #softwares-solidworks .ag-box{
-    background-color: #279f9f !important;
+    background-color: #20B2AA;
     height: fit-content;
 }
 /*----------------software_lists-----------*/
@@ -574,15 +586,14 @@ h1{
 
 /*----------------footer---------------*/
 #footer{
-    background: #56dbdb;
-    opacity: 1;
-    font-family: 'Source Serif Pro', serif;
+    background: #20B2AA;
+    font-family: 'Andada', serif;
     color: black;
     padding-top: 20px;
     padding-bottom: 10px;
+    line-height: 27px;
 }
-#footer .row h4{
-    color: #000080;
+#footer .row h3{
     font-family: 'Aldrich', sans-serif;
 }
 #footer .row p{
@@ -598,12 +609,10 @@ h1{
     font-size: x-large;
 }
 #footer .copyright{
-    letter-spacing: 1px;
     padding-top: 30px;
     text-align: right;
 }
 #footer .copyright a{
-    font-weight: bold;
     color: #000080 !important;
     font-family: 'Aldrich', sans-serif;
 }

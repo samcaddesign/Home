@@ -13,4 +13,4 @@ urlpatterns = [
     path('contact', contact_view),
     path('softwares', softwares_view, name="softwares"),
     path('base', header_view, name="base")
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

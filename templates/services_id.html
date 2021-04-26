@@ -1,5 +1,6 @@
 {% extends 'base.html'%}
-{%load static%}
+
+{% load static %}
 
 {%block content%}
     <body>
@@ -19,7 +20,7 @@
 
         <section id="softwares-solidworks">
             <div class="container">
-                <p><a href="{% url 'base' %}">Home</a> >> <a href="{% url 'services' %}">Services</a> >> {{name}}</p>
+                <p><a href="{% url 'base' %}">Home</a> > <a href="{% url 'services' %}">Services</a> > {{name}}</p>
                 <div class="row">
                     <div class="col-md-3 col-xs-12 pt-3 py-3 ag-box fadeInLeft">
                         <h3>Services</h3>
@@ -31,22 +32,17 @@
                                     {%endif%}
                                 {%endfor%}
                             </div>
-                            <div class="col-md-12">
-                                <!-- <a href="services-cad-simulation.html">CAD Simulation</a><br>
-                                <a href="services-analysis-in-cad.html">Analysis in CAD</a><br>
-                                <a href="services-cam-simulation.html">CAM Simulation</a><br>
-                                <a href="services-nc-program.html">NC Programming</a><br> -->
-                            </div>
                         </div>
                     </div>
                     <div class="col-md-9 col-xs-12 fadeInRight">
                         <h2>{{name}}</h2>
                         <p>{{description_1}}</p>
                         <p>{{description_2}}</p>
+                        <p>{{description_3}}</p>
                         <h4>{{head_1}}</h4>
                         <ul>
                             {% for head_1_info in head_1_info %}
-                                <li>{{head_1_info}}</li>
+                                <li><i class="fa fa-gear" aria-hidden="true"></i> {{head_1_info}}</li>
                             {%endfor%}
                         </ul>
                         <div class="row">                            
@@ -62,7 +58,7 @@
                         <h4>{{head_2}}</h4>
                         <ul>
                             {% for head_2_info in head_2_info %}
-                                <li>{{head_2_info}}</li>
+                                <li><i class="fa fa-star" aria-hidden="true"></i> {{head_2_info}}</li>
                             {%endfor%}
                         </ul>
                     </div>

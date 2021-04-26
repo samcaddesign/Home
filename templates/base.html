@@ -1,22 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-    {%load static %}
     <head>
         <title>SAM CADDesign | {{title}}</title>
-        <link rel="icon" href ="title-icon.png" type ="image/x-icon">
+        <link rel="icon" href ="../static/images/title-icon.png" type ="image/x-icon">
         <meta charset="UTF-8">
         <meta name="author" content="Muni Gopala Krishna">
         <meta name="description" content="Custom Engineering Design Services">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie-edge" 55-+>
-        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" media="screen">
         <link rel="stylesheet" href="{% static 'css/response.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'css/animated.css' %}" type="text/css">
         <link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Rajdhani:wght@500&family=Scope+One&family=Source+Serif+Pro&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">        
     </head>
     
     <body>
@@ -25,7 +24,7 @@
                 <nav class="navbar navbar-expand-lg">
                     <a class="navbar-brand company-name" href="index.html"><img src="../static/images/company-name-compress.png" title="company-name"></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <img class="navbar-toggler-icon" src="menu.png"></img>
+                        <img class="navbar-toggler-icon" src="../static/images/menu.png"></img>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <div class="mr-auto"></div>
@@ -48,17 +47,6 @@
                                                         <a class="dropdown-item" href="">{{data.name}}</a>
                                                     {% endif %}
                                                 {%endfor%}
-                                                <!--<a class="dropdown-item" href="softwares-ansys.html">ANSYS</a>
-                                                <a class="dropdown-item" href="softwares-autocad.html">AutoCAD</a>
-                                                <a class="dropdown-item" href="softwares-autocad-civil.html">ACAD Civil</a>
-                                                <a class="dropdown-item" href="softwares-autocad-electrical.html">ACAD Electrical</a>
-                                                <a class="dropdown-item" href="softwares-catia.html">CATIA</a>
-                                                <a class="dropdown-item" href="softwares-creo.html">CREO</a>
-                                                <a class="dropdown-item" href="softwares-inventor.html">Inventor</a>
-                                                <a class="dropdown-item" href="softwares-nxcad.html">NX CAD</a>
-                                                <a class="dropdown-item" href="softwares-revit.html">REVIT</a>
-                                                <a class="dropdown-item" href="softwares-sketchup.html">Sketch-up</a>
-                                                <a class="dropdown-item" href="softwares-solidworks.html">Solidworks</a> -->
                                             </div>                                        
                                     </div>
                                 </li>
@@ -74,31 +62,10 @@
                                                     <a class="dropdown-item" href="{% url 'services_id' data.id%}">{{data.name}}</a>
                                                 {%endif%}
                                             {%endfor%}
-                                            
-                                            <!-- <a class="dropdown-item" href="services-cad-simulation.html">CAD Simulation</a>
-                                            <a class="dropdown-item" href="services-cam-simulation.html">CAM simulation</a>
-                                            <a class="dropdown-item" href="services-civil&arch.html">Civil & Arch</a>               
-                                            <a class="dropdown-item" href="services-drawing&drafting.html">Drawing & Drafting</a>
-                                            <a class="dropdown-item" href="services-electrical-design.html">Electrical Design</a>
-                                            <a class="dropdown-item" href="services-industrial-design.html">Industrial Design</a>
-                                            <a class="dropdown-item" href="services-nc-program.html">NC Program</a> -->
                                         </div>
                                         
                                     </div>
                                 </li>
-                                <!-- 
-                                <li class="nav-item dropdown">
-                                    <div class="dropdown">
-                                        <a class="nav-link dropdown-toggle" href="projects.html" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
-                                            Projects
-                                        </a>
-                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                            <a class="dropdown-item" href="projects.html">Civil</a>
-                                            <a class="dropdown-item" href="projects.html">Electrical</a>
-                                            <a class="dropdown-item" href="projects.html">Mechanical</a>
-                                        </div>
-                                    </div>
-                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="about.html">About us</a>
                                 </li>
@@ -111,16 +78,16 @@
             </div>
         </div>
     </body>
-    {% block content%}
+    {% block content %}
 
 
-    {% endblock content%}
+    {% endblock content %}
 
     <section id="footer">
         <div class="container">
             <div class="row p-0">
                 <div class="col-md-5 col-sm-5">
-                    <h4><strong>Available Here</strong></h4>
+                    <h3>Available Here</h3>
                     <div class="row px-3 footer-address">
                         <div class="col-sm-4 col-xs-3">Head Office :</div>
                         <div class="col-sm-8 col-xs-9">Vallalar Street, Newpet,</br> Krishnagiri, Tamil Nadu.</div>
@@ -129,7 +96,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 col-sm-4" style="border-left: 1px solid #000080;">
-                    <h4><b>Quick Links</b></h4>
+                    <h3>Quick Links</h3>
                     <div class="row px-3">
                         <div class="col-md-6 col-xs-6">
                             <a href="projects.html">Project info</a><br>
@@ -145,7 +112,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-3" style="border-left: 1px solid #000080;">
-                    <h4><b>Follow us</b></h4>
+                    <h3>Follow us</h3>
                     <div style="text-align: center;">
                         <a class="cc-facebook btn btn-link" href="https://www.facebook.com/munigopala.krishna" target="_blank;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a class="cc-twitter btn btn-link " href="https://twitter.com/i_munigopal" target="_blank;"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -156,11 +123,10 @@
                 </div>
             </div><br>
             <div class="copyright">
-                Copyright &copy; 2021 <a><b> SAM Groups. </b></a> All rights reserved.<br> <!-- Design | <a href="#" style="color: black; text-decoration: underline;">Top</a> -->
+                Copyright &copy; 2021 <a><b> SAM CADDesign. </b></a> All rights reserved.<br> <!-- Design | <a href="#" style="color: black; text-decoration: underline;">Top</a> -->
             </div>
         </div>
     </section>
-
 
         <script src="{% static 'js/main.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

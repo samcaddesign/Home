@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette|Roboto&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url('https://fonts.googleapis.com/css2?family=Andada&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +20,7 @@ h1{
 /*-----------header-------------*/
 #header {
     width: 100%;
-    background-color: #ff5800;
+    background-color: #20B2AA;
 }
 #header .company-name img{
     width: auto;
@@ -348,7 +350,6 @@ h1{
 /*------------------softwares_solidworks-----------------*/
 #softwares-solidworks{
     padding-top: 10px;
-    font-family: 'Source Serif Pro', serif;
     color: black;
 }
 #softwares-solidworks .col-md-2{
@@ -359,17 +360,9 @@ h1{
     text-align: center;
     font-family: 'Aldrich', sans-serif;
     padding-top: 10px;
-    color: #000080 !important;
 }
-#softwares-solidworks h3, h4{
+#softwares-solidworks h3, h4, h5{
     font-family: 'Aldrich', sans-serif;
-    color: black;
-}
-#softwares-solidworks h5{
-    text-align: center;
-    font-family: 'Aldrich', sans-serif;
-}
-#softwares-solidworks .row a{
     color: black;
 }
 #softwares-solidworks .row ul li{
@@ -380,6 +373,7 @@ h1{
 #softwares-solidworks .row p{
     text-indent: 50px;
     text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
 }
 #softwares-solidworks .col-md-3 img{
     width: 100%;
