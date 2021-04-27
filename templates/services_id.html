@@ -18,7 +18,7 @@
             </div>
         </main>
 
-        <section id="softwares-solidworks">
+        <section id="services_id">
             <div class="container">
                 <p><a href="{% url 'base' %}">Home</a> > <a href="{% url 'services' %}">Services</a> > {{name}}</p>
                 <div class="row">
@@ -28,7 +28,7 @@
                             <div class="col-md-12">
                                 {% for data in services %}
                                     {%if data.services_active %}
-                                        <a href="{% url 'services_id' data.id %}">{{data.name}}</a><br>
+                                        <a class="show" href="{% url 'services_id' data.id %}">{{data.name}}</a><br>
                                     {%endif%}
                                 {%endfor%}
                             </div>

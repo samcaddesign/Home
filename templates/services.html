@@ -17,7 +17,7 @@
 
         <section id="softwares-solidworks">
             <div class="container">
-                <p><a href="{% url 'base' %}">Home</a> >> <a>Services</a></p>
+                <p><a href="{% url 'base' %}"> Home </a> > <a> Services</a></p>
             </div>
         </section>
 
@@ -34,7 +34,6 @@
                                         <img src="{{data.thumb_image.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
                                     </a>
                                 </div>
-                                <br>
                                 <a href="{% url 'services_id' data.id%}">{{data.name}}</a>
                             </div>
                             {%endif%}                                                

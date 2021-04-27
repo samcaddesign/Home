@@ -27,18 +27,27 @@ h1{
     height: auto;
 }
 #header a{
-    color: white;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14.4px;    
+    color: black;
+    font-family: 'Andada', serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 #header .dropdown-menu{
-    background-color: #56dbdb;
+    background-color: #20B2AA;
+    border-radius: 0 10px 0 10px;
+    padding: 0.1rem 0.7rem;
 }
 #header .dropdown:hover .dropdown-menu{
-    display: block;
+    display: inline-block;
 }
 #header .dropdown-item:hover{
-    text-decoration: underline;
+    background-color: #20B2AA;
+    border-radius: 0 10px 0 10px;
+    border: 1px solid #000080;
+}
+#header .nav-link:hover{
+    border: 1px solid #000080;
+    border-radius: 0 10px 0 10px;
 }
 #header .navbar-expand-lg a:hover{
     color: #000080;
@@ -49,8 +58,11 @@ h1{
 #header .nav-item:last-child{
     padding-right: 0em;
 }
-#header .nav-item{
-    padding: 0.3em;
+#header .nav-link{
+    padding: 0.5rem 1rem;
+}
+#header .dropdown-item{
+    padding: 0.5rem 1rem;
 }
 #header .navbar-toggler-icon{
     color: #000080;
@@ -203,20 +215,18 @@ h1{
     color: black;
 }
 #services p{
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Andada', serif;
 }
 #services .container{
-    background-color: white;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
 }
 #services .row a{
-    background-color: aliceblue;
     text-align: center;
     color: black;
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Aldrich', sans-serif;
 }
 #services .row a:hover{
     color: #000080;
@@ -240,14 +250,12 @@ h1{
     width: 100%;
     height: 100%;
 }
-#services .row a{
-    font-family: 'Aldrich', sans-serif;
-}
 #services .box .img-box{
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+    margin: 0 0 5px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 8px 4px rgba(225, 225, 225, 0.8), 0 0 8px 4px rgba(0, 0, 128, 0.4);
 }
 #services .box .img-box img{
     max-width: 100%;
@@ -348,37 +356,49 @@ h1{
     height: 100%;
 }
 
-/*------------------softwares_solidworks-----------------*/
-#softwares-solidworks{
+/*------------------services_id-----------------*/
+#services_id{
     padding-top: 10px;
     color: black;
     font-family: 'Andada', serif;
     font-size: 14px;
     line-height: 27px;
 }
-#softwares-solidworks .row h2{
+#services_id .row h2{
     background-color: #20B2AA;
+    border: 2px solid #279f9f;
+    border-radius: 5px;
     text-align: center;
     font-family: 'Aldrich', sans-serif;
     padding: 10px 0 10px 0;
 }
-#softwares-solidworks h3, h4, h5{
+#services_id h3, h4, h5{
     font-family: 'Aldrich', sans-serif;
     color: black;
 }
-#softwares-solidworks .row a{
-    color: black;
+#services_id .col-md-3{
+    border-radius: 0 20px 0 20px;
 }
-#softwares-solidworks .row p{
+#services_id .show{
+    color: black;
+    padding: 0.4rem 1rem;
+}
+#services_id .show:hover{
+    text-decoration: none;
+    background-color: #20B2AA;
+    border-radius: 0 10px 0 10px;
+    border: 1px solid #000080;
+}
+#services_id .row p{
     font-size: 16px !important;
     letter-spacing: 0.7px;
     text-indent: 50px;
     text-align: justify;
 }
-#softwares-solidworks .row a:hover{
+#services_id .row a:hover{
     color: #000080;
 }
-#softwares-solidworks .row ul li{
+#services_id .row ul li{
     color: black;
     text-indent: 30px;
     text-align: justify;
@@ -386,17 +406,18 @@ h1{
     font-family: 'Andada', serif;
     font-size: 16px !important;
     letter-spacing: 0.7px;
+    line-height: 32px;
 }
-#softwares-solidworks .row ul li i{
+#services_id .row ul li i{
     color: #000080;
 }
-#softwares-solidworks .col-md-3 img{
+#services_id .col-md-3 img{
     width: 100%;
 }
-#softwares-solidworks .col-md-9{
+#services_id .col-md-9{
     padding: 0 10px 0 20px;
 }
-#softwares-solidworks .ag-box{
+#services_id .ag-box{
     background-color: #20B2AA;
     height: fit-content;
 }
@@ -599,11 +620,15 @@ h1{
 #footer .row p{
     text-indent: 10px;
 }
-#footer .row a{
+#footer .row .show{
     color: black;
+    padding: 0.5rem 0.8rem;
 }
-#footer .row a:hover{
+#footer .show:hover{
+    text-decoration: none;
     color: #000080;
+    border: 1px solid #000080;
+    border-radius: 0 10px 0 10px;
 }
 #footer .btn-link{
     font-size: x-large;
