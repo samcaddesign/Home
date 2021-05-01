@@ -1,13 +1,13 @@
 {% extends 'base.html'%}
 {%load static%}
-{%block content%}
+{%block content%}        
     <main>
         <div id="slider">
             <div id="header-slider" class="carousel slide corousel-fade" data-ride="carousel">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="../static/images/body-slider-5.jpg" alt="serivices-image">
+                        <img class="d-block w-100" src="../static/images/body-slider-4.jpg" alt="softwares-image">
                         </div>
                     </div>
                 </div>
@@ -23,18 +23,16 @@
         <div class="container-fluid home-product">
             <div class="container">
                 <div class="row">
-                    {% for data in services %}
-                        {%if data.services_active%}
+                    {% for data in softwares %}
                         <div class="col-md-3 col-xs-6 box">
                             <div class="img-box">
-                                <a href="{% url 'services_id' data.id%}">
-                                    <img src="{{data.thumb_image.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
+                                <a href="{% url 'softwares_id' data.id %}">
+                                    <img src="{{data.logo.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
                                 </a>
                             </div>
-                            <a href="{% url 'services_id' data.id%}">{{data.name}}</a>
+                            <a href="{% url 'softwares_id' data.id %}">{{data.name}}</a>
                         </div>
-                        {%endif%}                                                
-                    {%endfor%}   
+                    {%endfor%}
                 </div>
             </div>
         </div>

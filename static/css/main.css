@@ -5,8 +5,7 @@
 * {
     margin: 0;
     padding: 0;
-  }
-  
+  }  
 h1{
     background-color: wheat;
     font-family: 'Aldrich', sans-serif;
@@ -16,7 +15,6 @@ h1{
     color: #000080;
     letter-spacing: 1px;
 }
-
 /*-----------header-------------*/
 #header {
     width: 100%;
@@ -71,10 +69,6 @@ h1{
 }
 
 /*-----------slider---------*/
-#slider{
-    padding: 0 0 10px 0;
-
-}
 #slider .carousel-indicators{
     bottom: -20px;
     visibility: visible;
@@ -175,7 +169,6 @@ h1{
     color: black;
     font-family: 'Aldrich', sans-serif;  
 }
-
 
 /*-----------services--------------*/
 #services .parallax{
@@ -327,12 +320,6 @@ h1{
 #feature .feature-flex > div:nth-last-child(1){
     width: 100%;
 }
-/* #feature .row .wrap-item{
-    height: 100%;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
-} */
-
 
 /*---------------scrolldown-------------*/
 #scrolldown{
@@ -363,6 +350,8 @@ h1{
     font-family: 'Andada', serif;
     font-size: 14px;
     line-height: 27px;
+    overflow: hidden;
+    position: relative;
 }
 #services_id .row h2{
     background-color: #20B2AA;
@@ -421,51 +410,19 @@ h1{
     background-color: #20B2AA;
     height: fit-content;
 }
-/*----------------software_lists-----------*/
-#softwares-lists{
-    width: 100%;
-    font-family: 'Aldrich', sans-serif;
-}
-#softwares-lists .row img{
-    width: 100%;
-    height: 100%;
-}
-#softwares-lists .row a{
-    text-align: center;
-    color: black;
+
+/*----------------links-----------*/
+#links{
     background-color: aliceblue;
+    border-bottom: 5px solid #efefef;
 }
-#softwares-lists .row a:hover{
-    color: #000080;
+#links .container{
+    padding: 10px 0px 5px 0px;
+    font-family: 'Andada', serif;
+    color: black;
+    font-size: 14px;
 }
-#softwares-lists .col-md-2{
-    margin-top: 10px;
-}
-#softwares-lists .row p{
-    margin-top: 10px;
-}
-#softwares-lists .box{
-    text-align: center;
-    margin-bottom: 20px;
-}
-#softwares-lists .box img{
-    width: 100%;
-    height: 100%;
-    padding-bottom: 10px;
-}
-#softwares-lists .box .img-box{
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
-}
-#softwares-lists .box .img-box img{
-    max-width: 100%;
-    transition: transform 2s;
-}
-#softwares-lists .box:hover .img-box img{
-    transform: scale(1.4);
-}
+
 /*----------------projects-----------*/
 #projects {
     font-family: 'Source Serif Pro', serif;
@@ -608,8 +565,9 @@ h1{
 /*----------------footer---------------*/
 #footer{
     background: #20B2AA;
-    font-family: 'Andada', serif;
     color: black;
+    font-family: 'Andada', serif;
+    font-size: 14px;
     padding-top: 20px;
     padding-bottom: 10px;
     line-height: 27px;

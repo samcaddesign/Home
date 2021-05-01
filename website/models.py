@@ -90,12 +90,14 @@ class softwares (models.Model):
     name = models.CharField(max_length=50)
     thumb_image = models.ImageField()
     description_1 = models.TextField()
-    description_2 = models.TextField()
+    description_2 = models.TextField(null=True, blank=True)
+    description_3 = models.TextField(null=True, blank=True)
+    description_4 = models.TextField(blank=True)
     description_active = models.BooleanField(default=True)
+    image_active = models.BooleanField(default=True)
     image_1 = models.ImageField()
     image_2 = models.ImageField()
     logo = models.ImageField()
-    # image_3 = models.ImageField()
     head = models.ManyToManyField('features')
     
     def __str__(self):
