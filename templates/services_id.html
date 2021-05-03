@@ -3,71 +3,70 @@
 {% load static %}
 
 {%block content%}
-    <body>
-        <main>
-            <div id="slider">
-                <div id="header-slider" class="carousel slide corousel-fade" data-ride="carousel">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" style="background-color: wheat;">
-                                <img class="d-block w-100" src="../static/images/serivices/services-industrial-design-image.png" alt="services-industrial-design"></img>
-                            </div>
+<body>
+    <main>
+        <div id="slider">
+            <div id="header-slider" class="carousel slide corousel-fade" data-ride="carousel">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" style="background-color: wheat;">
+                            <img class="d-block w-100" src="../static/images/serivices/services-industrial-design-image.png" alt="services-industrial-design"></img>
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-        <section id="links">
-            <div class="container">
-                <p><a href="{% url 'base' %}">Home</a> > <a href="{% url 'services' %}">Services</a> > {{name}}</p>
-            </div>
-        </section>
-
-        <section id="services_id">
-            <div class="container">                
-                <div class="row">
-                    <div class="col-md-3 col-xs-12 pt-3 py-3 ag-box fadeInLeft">
-                        <h3>Services</h3>
-                        <div class="row p-0">
-                            <div class="col-md-12">
-                                {% for data in services %}
-                                    {%if data.services_active %}
-                                        <a class="show" href="{% url 'services_id' data.id %}">{{data.name}}</a><br>
-                                    {%endif%}
-                                {%endfor%}
-                            </div>
+        </div>
+    </main>
+    <section id="links">
+        <div class="container">
+            <a href="{% url 'base' %}">Home </a> > <a href="{% url 'services' %}"> Services</a> > {{name}}
+        </div>
+    </section><br>
+    <section id="services_id">
+        <div class="container">                
+            <div class="row">
+                <div class="col-md-3 col-xs-12 pt-3 py-3 ag-box fadeInLeft">
+                    <h3>Services</h3>
+                    <div class="row p-0">
+                        <div class="col-md-12">
+                            {% for data in services %}
+                                {%if data.services_active %}
+                                    <a class="show" href="{% url 'services_id' data.id %}">{{data.name}}</a><br>
+                                {%endif%}
+                            {%endfor%}
                         </div>
                     </div>
-                    <div class="col-md-9 col-xs-12 fadeInRight">
-                        <h2>{{name}}</h2>
-                        <p>{{description_1}}</p>
-                        <p>{{description_2}}</p>
-                        <p>{{description_3}}</p>
-                        <h4>{{head_1}}</h4>
-                        <ul>
-                            {% for head_1_info in head_1_info %}
-                                <li><i class="fa fa-gear" aria-hidden="true"></i> {{head_1_info}}</li>
-                            {%endfor%}
-                        </ul>
-                        <div class="row">                            
-                            <div class="col-md-6 col-xs-12">
-                                <a><img src="{{image_1.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
-                            </div>
-                            {% if image_active %}
-                            <div class="col-md-6 col-xs-12">
-                                <a><img src="{{image_2.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
-                            </div>
-                            {%endif%}
-                        </div><br>
-                        <h4>{{head_2}}</h4>
-                        <ul>
-                            {% for head_2_info in head_2_info %}
-                                <li><i class="fa fa-star" aria-hidden="true"></i> {{head_2_info}}</li>
-                            {%endfor%}
-                        </ul>
-                    </div>
-                </div>           
-            </div>
-        </section>
-    </body>
+                </div>
+                <div class="col-md-9 col-xs-12 fadeInRight">
+                    <h2>{{name}}</h2>
+                    <p>{{description_1}}</p>
+                    <p>{{description_2}}</p>
+                    <p>{{description_3}}</p>
+                    <h4>{{head_1}}</h4>
+                    <ul>
+                        {% for head_1_info in head_1_info %}
+                            <li><i class="fa fa-gear" aria-hidden="true"></i> {{head_1_info}}</li>
+                        {%endfor%}
+                    </ul>
+                    <div class="row">                            
+                        <div class="col-md-6 col-xs-12">
+                            <a><img src="{{image_1.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
+                        </div>
+                        {% if image_active %}
+                        <div class="col-md-6 col-xs-12">
+                            <a><img src="{{image_2.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
+                        </div>
+                        {%endif%}
+                    </div><br>
+                    <h4>{{head_2}}</h4>
+                    <ul>
+                        {% for head_2_info in head_2_info %}
+                            <li><i class="fa fa-star" aria-hidden="true"></i> {{head_2_info}}</li>
+                        {%endfor%}
+                    </ul>
+                </div>
+            </div>           
+        </div>
+    </section>
+</body>
 {%endblock content%}
