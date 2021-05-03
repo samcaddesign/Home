@@ -501,11 +501,22 @@ h1{
 #softwares_id .row a:hover{
     color: #000080;
 }
-#softwares_id .row ul li{
+#softwares_id .inline{
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 100%;
     color: black;
-    text-indent: 30px;
-    list-style-type: none;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+#softwares_id .float{
+    width: 50%;
+    float: left;
+}
+#softwares_id ul li{
+    list-style-type: none;
+    text-indent: 30px;
 }
 #softwares_id .row ul li i{
     color: #000080;

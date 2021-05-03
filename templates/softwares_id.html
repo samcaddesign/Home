@@ -40,9 +40,16 @@
                 </div>
                 <div class="col-md-9 col-xs-12 fadeInRight">
                     <h2>{{name}}</h2>
-                    <p>{{description_1}}</p>
+                    <div class="row p-0">
+                        <div class="col-md-9 col-xs-12">
+                            <p>{{description_1}}</p>
+                        </div>
+                        <div class="col-md-3 col-xs-12" style="text-align: center;">
+                            <a><img src="{{logo.url}}" alt="{{name}}"></a>
+                        </div>
+                    </div>
                     <p>{{description_2}}</p>
-                    <p>{{description_3}}</p> 
+                    <p>{{description_3}}</p>
                     <div class="row">                            
                         <div class="col-md-6 col-xs-12">
                             <a><img src="{{image_1.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
@@ -53,20 +60,21 @@
                         </div>
                         {%endif%}
                     </div>
-                    <h4>Features & Objectives :</h4>
-                    <div class="row">
-                        {% for data in head %}
-                            <div class="col-md-6 col-sm-12">
-                                <h5>{{data.head}}</h5>
-                                <ul>
-                                    {% for content in data.content %}
-                                    <li>{{content}}</li>
-                                    {%endfor%}
-                                </ul>
+                    <p>{{description_4}}</p>
+                    <h4>Features & Objectives :</h4>                        
+                            <div class="inline">
+                                {% for data in head %}
+                                <div class="float">
+                                    <h5>{{data.head}}</h5>
+                                    <ul>
+                                        {% for content in data.content %}
+                                        <li>{{content}}</li>
+                                        {%endfor%}
+                                    </ul>
+                                </div>
+                                {%endfor%}
                             </div>
-                        {%endfor%}
                         </div>
-                    </div>
                 </div>
             </div>           
         </div>

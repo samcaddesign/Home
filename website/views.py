@@ -108,9 +108,12 @@ def softwares_id(request, id):
     instance_2 = instance.head.all()
     name = instance.name
     thumb_image = instance.thumb_image
+    logo = instance.logo
     description_1 = instance.description_1
     description_2 = instance.description_2
     description_3 = instance.description_3
+    description_4 = instance.description_4
+    description_active = instance.description_active
     image_1 = instance.image_1
     image_2 = instance.image_2
     image_active = instance.image_active
@@ -124,9 +127,12 @@ def softwares_id(request, id):
     context = {
         "name": name,
         "thumb_image": thumb_image,
+        "logo": logo,
         "description_1": description_1,
         "description_2": description_2,
         "description_3": description_3,
+        "description_4": description_4,
+        "description_active": description_active,
         "title": name,
         "image_1": image_1,
         "image_2": image_2,
