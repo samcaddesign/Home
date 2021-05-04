@@ -121,7 +121,7 @@ def softwares_id(request, id):
     for obj_2 in instance_2:
         head_dict = {
             "head": obj_2.head,
-            "content": obj_2.content.split(",")
+            "content": obj_2.content.split(";")
         }
         head_list.append(head_dict)
     context = {

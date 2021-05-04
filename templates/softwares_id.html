@@ -32,7 +32,7 @@
                         <div class="col-md-12">
                             {% for data in softwares %}
                                 {%if data.softwares_active %}
-                                    <a class="show" href="{% url 'softwares_id' data.id %}">{{data.name}}</a><br>
+                                    <a class="show" href="{% url 'softwares_id' data.id %}"><i class="fa fa-gear" aria-hidden="true"></i> &nbsp; {{data.name}}</a><br>
                                 {%endif%}
                             {%endfor%}
                         </div>
