@@ -123,7 +123,7 @@ class contact (models.Model):
     last_name = models.CharField(max_length=50)
     email_id = models.CharField(max_length=50)
     number = models.CharField(max_length=50)
-    name = models.ForeignKey('need', on_delete=models.CASCADE, null=True)
+    need = models.ForeignKey('need', on_delete=models.CASCADE, null=True)
     message = models.TextField()
 
     def __str__(self):

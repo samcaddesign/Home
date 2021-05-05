@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from .models import need, services, values, contact, softwares, features, company, members, about, header
+from django.core.mail import send_mail
+from django.conf import settings
+from django.http import HttpResponse
 
 def need_view(request):
     instance = features.objects.all()
@@ -57,6 +60,8 @@ def serives_id(request, id):
 def contact_view(request):
     ins = contact.objects.all()
     need_ins = need.objects.all()
+    instance_1 = softwares.objects.all()
+    instance_2 = services.objects.all()
     need_list = []
     for obj in need_ins:
         need_dict = {
@@ -71,21 +76,28 @@ def contact_view(request):
         number = request.POST['number']
         email = request.POST['email']
         message = request.POST['message']
-        need_value    = request.POST['need']
+        need_value = request.POST['need']
         get_need_ins = need.objects.get(name=need_value)
-        obj = contact.objects.create(name=get_need_ins, first_name=firstname, last_name=lastname, number=number, email_id=email, message=message)
+        obj = contact.objects.create(need=get_need_ins, first_name=firstname, last_name=lastname, number=number, email_id=email, message=message)
         obj.save()
         contextq = {
-            'key' : "submitted",
-            'title': "form",
+            'key' : "<em>Thanks</em> for contacting us!<br>We will get back to you soon!",
+            'first_name': firstname,
+            'title': "Contact",
+            "need": need_list,
+            'softwares': instance_1,
+            'services': instance_2,
             "bg": "lightyellow"
         }
+        send_mail('Request Received to us - SAM CADDesign', 'Thanks for Contacting us! We will get back to you soon..!', 'munigopalakrishna@gmail.com', [email], fail_silently=False)
         return render(request, "form.html", contextq)
    
     context = {
-        'key': "enter details",
-        'title': "form",
+        'key': "",
+        'title': "Contact",
         "need": need_list,
+        'softwares': instance_1,
+        'services': instance_2,
         "bg": "grey"
     }
     return render(request, "form.html", context)

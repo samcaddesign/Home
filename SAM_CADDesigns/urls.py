@@ -10,7 +10,7 @@ urlpatterns = [
     path('need', need_view),
     path('services', services_view, name="services"),
     path('services/<str:id>', serives_id, name="services_id"),
-    path('contact', contact_view),
+    path('contact', contact_view, name="contact"),
     path('softwares', softwares_view, name="softwares"),
     path('softwares/<str:id>', softwares_id, name="softwares_id"),
     path('base', header_view, name="base")

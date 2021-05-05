@@ -3,31 +3,113 @@
 {%load static%}
 
 {%block content%}
-        
-    <form method="POST">
-        {%csrf_token%}
-        <input id="phone" type="tel" name="number" class="form-control" placeholder="Enter 10 digit number" pattern="[0-9]{10}" required="required" data-error="Phone number is required.">
-        <input id="form_email" type="email" name="email" class="form-control" placeholder="Enter your email" required="required" data-error="Valid email is required.">
-        <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="Enter your last name" required="required" data-error="Lastname is required.">
-        <input id="form_name" type="text" name="firstname" class="form-control" placeholder="Enter your first name" required="required" data-error="Firstname is required.">
-        <textarea id="form_message" name="message" class="form-control" placeholder="Message for us" rows="5" required="required" data-error="Please, leave us a message."></textarea>
-        <br>
-        <br>
-        <label for="cars">Choose a car:</label>
-        
-        <select id="cars" name="need">
-            {% for data in need%}
-            {%if data.active %}
-            <option value="{{data.need}}">{{data.need.name}}</option>
-            {%endif%}
-            {%endfor%}
-        </select>
-      
-        
-  
-    
+<main>
+    <div id="slider">
+        <div id="header-slider" class="carousel slide corousel-fade" data-ride="carousel">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <img class="d-block w-100" src="../static/images/body-slider-7.jpg" alt="Contact_me_ever">
+                    </div>
+                </div>
+            </div>
+            <h1>Remember us Forever ... !!!</h1><br>
+        </div>
+    </div>
+</main>
+<section id="contact">
+    <div class="container">
+        <div class="row" style="padding-bottom: 10px;">
+            <div class="col-md-6">
+                <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
+                    <h2>Registered Address</h2>
+                    <div class="row px-3">
+                        <div class="col-md-3 col-sm-3"><p><i class="fa fa-map-marker top-6"></i> <strong class="text-dark">Office:</strong></p></div>
+                        <div class="col-md-9 col-sm-9 p-0">Vallalar Street, Newpet,<br> Krishnagiri, Tamil Nadu - 635 001.</div>
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-phone top-6"></i> <strong class="text-dark">Phone:</strong></div>
+                        <div class="col-md-9 col-sm-9 p-0"><a href="tel:+91-9488705066">+91 94887 05066</a></div>
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-skype"></i> <strong class="text-dark">Skype:</strong></div>
+                        <div class="col-md-9 col-sm-9 p-0">SAM CADDesign.</div>
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-envelope top-6"></i> <strong class="text-dark">Email:</strong></div>
+                        <div class="col-md-9 col-sm-9 p-0"><a href="mailto:admin@samcaddesign.com">admin@samcaddesign.com</a></div>
+                    </div>
+                </div><br>                                        
+                <div class="business-hours">
+                    <h2>Business Hours</h2>
+                    <i class="fa fa-clock-o top-6"></i> Monday to Friday - 10am to 7pm<br>
+                    <i class="fa fa-clock-o top-6"></i> Saturday - 10am to 3pm<br>
+                    <i class="fa fa-clock-o top-6"></i> Sunday - Closed<br>
+                </div><br>                
+                <div class="embed-responsive embed-responsive-21by9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.8322880236498!2d78.2204445910253!3d12.513194136728007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd79c388f3376030!2sSAM%20CADDesigns!5e0!3m2!1sen!2sin!4v1603172017339!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="overflow-hidden"><h2>Contact Us</h2></div>
+                {% if first_name %}
+                <center>
+                    <h2>Hai, {{first_name}}</h2>
+                    <p>We receive your request and will repond shortly..!</p>
+                    <img class="w-50" src="../static/images/contact.png" alt="Contact">
+                    <div class="thankyou_message">
+                        <h4><em>Thanks for contacting us..!</em></h4>
+                    </div>
+                    <a href="{% url 'contact' %}">Click here</a> to redirect
+                </center><br>
+                {% else %}
+                <div class="container-fluid">
+                    <div class="overflow-hidden pt-3" style="text-align: center; letter-spacing: 0.4px;">
+                        <center style="color: #000080;"><i><b>Hi, there. Feel free to say your need us</b></i></center><br>
+                        <i>Simply, fill up the following form and this has been received directly by the admin head. 
+                            We will contact you within <b style="color: #000080;">24 hours</b></i>
+                    </div>
+                    <form id="contact-form" method="POST" class="gform pure-form pure-form-stacked py-3">
+                    {%csrf_token%}
+                        <div class="row pb-2">
+                            <div class="col-md-6">
+                                <label for="form_name">First name *</label>
+                                <input id="form_name" type="text" name="firstname" class="form-control" placeholder="Enter your first name" required="required" data-error="Firstname is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="form_lastname">Last name *</label>
+                                <input id="form_lastname" type="text" name="lastname" class="form-control" placeholder="Enter your last name" required="required" data-error="Lastname is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <label for="form_email">Email *</label>
+                        <input id="form_email" type="email" name="email" class="form-control" placeholder="abc@xyz.com" required="required" data-error="Valid email is required.">
+                        <div class="help-block with-errors"></div>
+                        <div class="row pt-2 pb-2">
+                            <div class="col-md-6">
+                                <label for="phone">Phone Number *</label>
+                                <input id="phone" type="tel" name="number" class="form-control" placeholder="Enter 10 digit number only" pattern="[0-9]{10}" required="required" data-error="Phone number is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="form_need">Please specify your need *</label>
+                                <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                    <option value selected>--Select--</option>
+                                    {% for data in need %}
+                                        {%if data.active %}
+                                            <option value="{{data.need}}">{{data.need.name}}</option>
+                                        {%endif%}
+                                    {%endfor%}
+                                </select>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <label for="form_message">Message *</label>
+                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for us" rows="6" required="required" data-error="Please, leave us a message."></textarea>
+                        <div class="help-block with-errors"></div><br>
 
-
-        <input type="submit" name="submit"> </input>
-    </form>
+                        <button type="submit" name="submit">Submit</button>
+                        <!-- Customise the Thankyou Message People See when they submit the form: -->                        
+                    </form>
+                </div>                    
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section><br>
 {%endblock content%}

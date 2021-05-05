@@ -63,7 +63,7 @@
                                     <a class="nav-link" href="about.html">About us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                                 </li> 
                             </ul>
                     </div>
@@ -98,7 +98,7 @@
                         </div>
                         <div class="col-md-6 col-xs-6">
                             <a class="show w-100" href="about.html">About us</a><br>
-                            <a class="show w-100" href="contact.html">Contact</a>
+                            <a class="show w-100" href="{% url 'contact' %}">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -119,6 +119,7 @@
         </div>
     </section>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/swiper.min.js' %}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
