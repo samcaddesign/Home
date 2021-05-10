@@ -1,29 +1,40 @@
 from django.shortcuts import render
-from .models import need, services, values, contact, softwares, features, company, members, about, header
+from .models import need, services, values, contact, softwares, features, company, members, aboutus, header
 from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse
 
-def need_view(request):
-    instance = features.objects.all()
-    need_list = []
+def about_view(request):
+    instance = aboutus.objects.all()
+    instance_0 = services.objects.all()
+    instance_1 = softwares.objects.all()
+    instance_2 = members.objects.all()
+    about_list = []
     for obj in instance:
-        need_dict = {
-            "name": obj.content.split(",")
+        about_dict = {
+            "name": obj.name,
+            "description_1": obj.description_1.split(";"),
+            "description_2": obj.description_2.split(";"),
+            "description_3": obj.description_3.split(";"),
+            "description_4": obj.description_4.split(";"),
+            "disclaimer": obj.disclaimer,
+            "mission": obj.mission,
+            "vision": obj.vision
         }
-        need_list.append(need_dict)
+        about_list.append(about_dict)
     context = {
-        "key": need_list
+        "title": "Aboutus",
+        'services': instance_0,
+        'softwares': instance_1,
+        'members': instance_2,
+        "about": about_list
     }
-    return render(request, "index.html", context)
-
-
+    return render(request, "about.html", context)
 
 def serives_id(request, id):
     instance = services.objects.get(pk=id)
     instance_0 = services.objects.all()
-    instance_1 = header.objects.all()
-    instance_2 = softwares.objects.all()
+    instance_1 = softwares.objects.all()
     name = instance.name
     thumb_image = instance.thumb_image
     description_1 = instance.description_1
@@ -51,8 +62,7 @@ def serives_id(request, id):
         "image_2": image_2,
         "image_active": image_active,
         'services': instance_0,
-        'header': instance_1,
-        'softwares': instance_2
+        'softwares': instance_1
     }
     return render(request, "services_id.html", context)
 

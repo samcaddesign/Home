@@ -17,19 +17,27 @@ class members (models.Model):
     name = models.CharField(max_length=50)
     designation = models.CharField(max_length=50, null=True)
     profile = models.CharField(max_length=50, null=True)
+    twitter = models.CharField(max_length=100, blank=True)
+    linkedin = models.CharField(max_length=100, blank=True)
+    instagram = models.CharField(max_length=100, blank=True)
     profile_active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
 
-class about (models.Model):
+class aboutus (models.Model):
     about_active = models.BooleanField(default=True)
-    heading = models.CharField(max_length=50)
-    description_1 = models.TextField(blank=True)
-    description_2 = models.TextField(blank=True)
+    name = models.CharField(max_length=50)
+    description_1 = models.TextField()
+    description_2 = models.TextField()
+    description_3 = models.TextField(blank=True)
+    description_4 = models.TextField(blank=True)
+    disclaimer = models.TextField(default=True)
+    mission = models.TextField(default=True)
+    vision = models.TextField(default=True)
 
     def __str__(self):
-        return self.heading
+        return self.name
 
 class header (models.Model):
     # header_active = models.BooleanField(default=True)
@@ -62,6 +70,7 @@ class marquee (models.Model):
 class services (models.Model):
     services_active = models.BooleanField(default=True)
     name = models.CharField(max_length=50, null=True)
+    percentage = models.CharField(default=True, max_length=3)
     thumb_image = models.ImageField()
     name_active = models.BooleanField(default=True)
     description_1 = models.TextField()

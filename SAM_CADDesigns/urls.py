@@ -1,13 +1,13 @@
 
 from django.contrib import admin
 from django.urls import path
-from website.views import need_view, services_view, serives_id, contact_view, softwares_view, softwares_id, header_view
+from website.views import about_view, services_view, serives_id, contact_view, softwares_view, softwares_id, header_view
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('need', need_view),
+    path('aboutus', about_view, name="aboutus"),
     path('services', services_view, name="services"),
     path('services/<str:id>', serives_id, name="services_id"),
     path('contact', contact_view, name="contact"),

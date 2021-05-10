@@ -70,6 +70,9 @@ h1{
 }
 
 /*-----------slider---------*/
+#slider h1{
+    margin-bottom: 0%;
+}
 #slider .carousel-indicators{
     bottom: -20px;
     visibility: visible;
@@ -117,25 +120,29 @@ h1{
 }
 /*--------------About--------------*/
 #about {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;  
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 27px;
     text-align: justify;
     color: black;
     margin-top: 20px;
 }
-#about .container{
-    background-color: #ffffff;
+#about .float{
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
+    color: black;
 }
-#about .container .row{
-    padding-top: 12px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+#about .left{
+    width: 40%;
+    text-align: center;
+}
+#about .right{
+    width: 60%;
 }
 #about h2{
-    border-bottom: 2px solid #000080;
-    width: fit-content;
     color: black;
-    font-family: 'Aldrich', sans-serif;    
+    font-family: 'Aldrich', sans-serif;
 }
 #about .btn-primary{
     padding: 5px 20px;
@@ -146,29 +153,67 @@ h1{
     border-radius: 5px;
 }
 #about .about-content{
-    padding-top: 10px;
     text-indent: 50px;
-}
-#about .skills-bar p{
-    margin-bottom: 6px;
-    color: black;
-    font-weight: bold;
 }
 #about i{
     font-size: large;
 }
-#about .progress-bar{
-    border-radius: 16px;
-    background-color: #000080;
+
+/*--------------swiper------------*/
+/* #swiper .container{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 0 20px 0 20px;
+    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4); 
+} */
+#swiper h6{
+    font-family: 'Andada', serif;
+    font-size: 14px;
+    color: black !important;
 }
-#about .progress{
-    border-radius: 16px !important;
-    margin-bottom: 10px;
-    background-color: lightgrey;
-}
-#about .skills-bar h2{
+#swiper h2{
     color: black;
-    font-family: 'Aldrich', sans-serif;  
+    font-family: 'Aldrich', sans-serif;
+    padding-bottom: 10px;
+}
+#swiper .progress-bar{
+    background-color: #20B2AA;
+    color: #000080;
+}
+#swiper .progress{
+    font-family: 'Aldrich', sans-serif;
+    border-radius: 15px !important;
+    background-color: lightgrey;
+    margin-bottom: 12px;
+}
+
+/*--------------profiles-----------*/
+#profiles h2{
+    font-family: 'Aldrich', sans-serif;
+}
+#profiles .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    background-color: wheat;
+    width: 260px;
+    height: 390px;
+    text-align: center;
+    border: 1px solid #000080;
+    border-radius: 0 15px 0 15px;
+    overflow: hidden;
+}
+#profiles .info h6{
+    font-family: 'Andada', serif;
+}
+#profiles .info a{
+    color: black;
+}
+#profiles .info a:hover{
+    color: #000080;
+}
+#profiles .swiper-pagination{
+    position: relative;
+    bottom: 0px;
 }
 
 /*-----------services--------------*/
@@ -303,91 +348,6 @@ h1{
     transform: scale(1.2);
 }
 
-/*---------------feature------------*/
-#feature{
-    margin-top: 30px;
-    font-family: 'Source Serif Pro', serif;
-    color: black;
-}
-#feature .container{
-    background-color: #ffffff;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 0px 8px 0 rgba(225, 225, 225, 0.8), 0 0px 20px 0 rgba(0, 0, 128, 0.4);
-}
-#feature .container .feature-heading{
-    background-color: aliceblue;
-    text-align: center;
-    padding: 10px 0 10px 0; 
-    margin: 20px 0 20px 0;
-}
-#feature .container .row{
-    background: aliceblue;
-    border-radius: 0px 0px 5px 5px;
-    padding: 30px 0px 30px 0px;
-}
-#feature .container h5{
-    font-style: italic;
-    font-family: 'Source Serif Pro', serif;
-    text-align: center;
-}
-#feature .container h6{
-    color: #000080;
-    font-style: italic;
-    font-family: 'Source Serif Pro', serif;
-    text-align: center;
-}
-#feature .container p{
-    font-family: 'Source Serif Pro', serif; 
-    text-align: center;
-}
-#feature h2{
-    text-align: center;
-    font-family: 'Aldrich', sans-serif;
-}
-#feature h4{
-    font-family: 'Aldrich', sans-serif;
-}
-#feature .row .item-img{
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-#feature .feature-flex{
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-}
-#feature .feature-flex > div{
-    width: 48%;
-    margin: 10px;
-}
-#feature .feature-flex > div:nth-last-child(1){
-    width: 100%;
-}
-
-/*---------------scrolldown-------------*/
-#scrolldown{
-    padding-top: 30px;
-    font-family: 'Source Serif Pro', serif;
-    background: whitesmoke;
-}
-#scrolldown .ab-top{
-    color: #000080;
-    padding-top: 20px;
-}
-#scrolldown .row{
-    text-align: center;
-    font-weight: bold;
-}
-#scrolldown .row p{
-    color: black;
-}
-#scrolldown .ag-box{
-    width: 100%;
-    height: 100%;
-}
-
 /*------------------services_id-----------------*/
 #services_id{
     padding-top: 10px;
@@ -405,7 +365,7 @@ h1{
     font-family: 'Aldrich', sans-serif;
     padding: 10px 0 10px 0;
 }
-#services_id h3, h4, h5{
+#services_id h3, h4{
     font-family: 'Aldrich', sans-serif;
     color: black;
 }
@@ -535,13 +495,98 @@ h1{
 /*----------------links-----------*/
 #links{
     background-color: aliceblue;
-    border-bottom: 5px solid #efefef;
+    border-bottom: 3px solid #efefef;
 }
 #links .container{
-    padding: 10px 0px 5px 0px;
+    padding: 10px 0px 10px 15px;
     font-family: 'Andada', serif;
     color: black;
     font-size: 14px;
+}
+
+/*---------------feature------------*/
+#feature{
+    margin-top: 30px;
+    font-family: 'Source Serif Pro', serif;
+    color: black;
+}
+#feature .container{
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0px 8px 0 rgba(225, 225, 225, 0.8), 0 0px 20px 0 rgba(0, 0, 128, 0.4);
+}
+#feature .container .feature-heading{
+    background-color: aliceblue;
+    text-align: center;
+    padding: 10px 0 10px 0; 
+    margin: 20px 0 20px 0;
+}
+#feature .container .row{
+    background: aliceblue;
+    border-radius: 0px 0px 5px 5px;
+    padding: 30px 0px 30px 0px;
+}
+#feature .container h5{
+    font-style: italic;
+    font-family: 'Source Serif Pro', serif;
+    text-align: center;
+}
+#feature .container h6{
+    color: #000080;
+    font-style: italic;
+    font-family: 'Source Serif Pro', serif;
+    text-align: center;
+}
+#feature .container p{
+    font-family: 'Source Serif Pro', serif; 
+    text-align: center;
+}
+#feature h2{
+    text-align: center;
+    font-family: 'Aldrich', sans-serif;
+}
+#feature h4{
+    font-family: 'Aldrich', sans-serif;
+}
+#feature .row .item-img{
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#feature .feature-flex{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+#feature .feature-flex > div{
+    width: 48%;
+    margin: 10px;
+}
+#feature .feature-flex > div:nth-last-child(1){
+    width: 100%;
+}
+
+/*---------------scrolldown-------------*/
+#scrolldown{
+    padding-top: 30px;
+    font-family: 'Source Serif Pro', serif;
+    background: whitesmoke;
+}
+#scrolldown .ab-top{
+    color: #000080;
+    padding-top: 20px;
+}
+#scrolldown .row{
+    text-align: center;
+    font-weight: bold;
+}
+#scrolldown .row p{
+    color: black;
+}
+#scrolldown .ag-box{
+    width: 100%;
+    height: 100%;
 }
 
 /*----------------projects-----------*/
@@ -623,74 +668,6 @@ h1{
     font-family: 'Andada', serif;
     letter-spacing: 0.7px;
 }
-/*--------------profiles-----------*/
-#profiles{
-    font-family: 'Source Serif Pro', serif;
-    color: black;
-}
-#profiles .swiper-container {
-    width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-#profiles .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 250px;
-    height: 380px;
-    background-color: wheat;
-    border: 1px solid black;
-    border-radius: 20px;
-    overflow: hidden;
-}
-#profiles .info{
-    text-align: center;
-    color: black;
-}
-#profiles .info h5, h6{
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-#profiles .info a{
-    padding-top: 0px;
-    color: black;
-}
-#profiles .info a:hover{
-    color: #000080;
-}
-#profiles .swiper-pagination{
-    position: relative;
-    bottom: 0px;
-}
-#profiles .img-box{
-    margin-top: -25px;
-}
-
-/*-----------------about-leadership-----------*/
-#leadership {
-    color: black;
-}
-#leadership .row a{
-    color: black;
-}
-#leadership h5{
-    font-family: 'Source Serif Pro', serif;
-}
-#leadership p{
-    font-family: 'Source Serif Pro', serif;
-}
-#leadership .row img{
-    padding-left: 10px;
-    padding-top: 10px;
-}
-#leadership .col-md-9{
-    padding-left: 40px;
-    padding-top: 10px;
-}
-#leadership .btn{
-    margin: 0px;
-}
 
 /*----------------footer---------------*/
 #footer{
@@ -725,6 +702,7 @@ h1{
 #footer .copyright{
     padding-top: 30px;
     text-align: right;
+    letter-spacing: 0.7px;
 }
 #footer .copyright a{
     color: #000080 !important;
