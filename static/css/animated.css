@@ -331,8 +331,8 @@
 }
 
 /*-----------scrolldown--------------*/
-#scrolldown .row .fa{
-	animation: fadeInOut 10s linear infinite;
+#scrolldown .fa{
+	animation: fadeInOut 3s linear infinite;
 }
 
 /*-----------slider-------------*/

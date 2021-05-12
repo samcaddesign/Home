@@ -31,7 +31,7 @@ def about_view(request):
     }
     return render(request, "about.html", context)
 
-def serives_id(request, id):
+def serivces_id(request, id):
     instance = services.objects.get(pk=id)
     instance_0 = services.objects.all()
     instance_1 = softwares.objects.all()
@@ -177,16 +177,37 @@ def services_view(request):
     return render(request, "services.html", context)
 
 
-def header_view(request):
-    instance = header.objects.all()
+def home_view(request):
     instance_1 = services.objects.all()
     instance_2 = softwares.objects.all()
     instance_3 = company.objects.all()
+    instance_4 = aboutus.objects.all()
+    instance_5 = values.objects.all()
+    about_list = []
+    for obj in instance_4:
+        about_dict = {
+            "name": obj.name,
+            "description_1": obj.description_1.split(";"),
+            "description_2": obj.description_2.split(";"),
+            "description_3": obj.description_3.split(";"),
+            "description_4": obj.description_4.split(";"),
+            "disclaimer": obj.disclaimer,
+            "mission": obj.mission,
+            "vision": obj.vision
+        }
+        about_list.append(about_dict)
     context = {
-        'header': instance,
         'services': instance_1,
         'softwares': instance_2,
         'company': instance_3,
+        'about': about_list,
+        'values': instance_5,
         'title': "Home"
+    }
+    return render(request, "index.html", context)
+
+def base_view(request):    
+    context = {        
+        'title': ""
     }
     return render(request, "base.html", context)

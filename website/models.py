@@ -113,10 +113,11 @@ class softwares (models.Model):
         return self.name
 
 class values (models.Model):
-    image = models.ImageField()
-    count = models.TextField()
     name = models.CharField(max_length=50)
+    image = models.CharField(max_length=50, default=True)
+    count = models.CharField(max_length=50)
     quote = models.CharField(max_length=100)
+    description_1 = models.TextField(blank=True)
 
     def __str__(self):
         return self.name

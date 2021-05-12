@@ -88,11 +88,13 @@ h1{
     text-shadow: 5px 5px 5px #279f9f;
 }
 #slider .btn-primary{
-    padding: 5px 20px;
+    font-size: 14px;
+    padding: 8px 22px;
     margin-top: 20px;
-    background-color: #000080;
-    border-color: #000080;
-    font-family: 'Rajdhani', sans-serif;
+    background-color: #20B2AA;
+    border: none;
+    font-family: 'Andada', serif;
+    color: black;
     border-radius: 5px;
 }
 /*--------------marquee----------*/
@@ -123,7 +125,6 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 27px;
-    text-align: justify;
     color: black;
     margin-top: 20px;
 }
@@ -140,20 +141,23 @@ h1{
 #about .right{
     width: 60%;
 }
-#about h2{
+#about h2, h3{
     color: black;
     font-family: 'Aldrich', sans-serif;
 }
 #about .btn-primary{
-    padding: 5px 20px;
+    font-size: 14px;
+    padding: 8px 22px;
     margin-top: 20px;
-    background-color: #000080;
-    border-color: #000080;
-    font-family: 'Rajdhani', sans-serif;
+    background-color: #20B2AA;
+    border: none;
+    font-family: 'Andada', serif;
+    color: black;
     border-radius: 5px;
 }
 #about .about-content{
     text-indent: 50px;
+    text-align: justify;
 }
 #about i{
     font-size: large;
@@ -218,12 +222,13 @@ h1{
 
 /*-----------services--------------*/
 #services .parallax{
-    background: url(../services-background.png) no-repeat left;
-    background-color: whitesmoke;
-    background-size: contain;
+    background: url(../images/parallax.png) no-repeat;
     background-attachment: fixed;
     height: 500px;
-    width: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 27px;
+    font-size: 14px;
     position: relative;
     z-index: -1;
 }
@@ -232,21 +237,15 @@ h1{
     padding-top: 8rem;
     width: fit-content;
 }
-#services .parallax .parallax-info .parallax-style h2{
-    border-bottom: 2px solid #000080;
-}
 #services .parallax .parallax-info .parallax-style{
     padding: 20px;
     border-color: #000080;
-    background: linear-gradient(lightgrey, #ffffff);
-    border-radius: 5px;
+    background: #efefef;
+    border-radius: 0 15px 0 15px;
     box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
 }
 #services .parallax .parallax-info .parallax-style ul{
-    list-style-type: none;
-}
-#services .parallax .parallax-info .parallax-style ul li{
-    font-family: 'Source Serif Pro', serif;
+    list-style-type: none;    
     text-indent: 20px;
 }
 #services h2{
@@ -259,13 +258,14 @@ h1{
 #services .container{
     padding-top: 30px;
     padding-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4);
+    /* border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(225, 225, 225, 0.8), 0 6px 20px 0 rgba(0, 0, 128, 0.4); */
 }
 #services .row a{
     text-align: center;
     color: black;
     font-family: 'Aldrich', sans-serif;
+    font-size: 14px;
 }
 #services .row a:hover{
     color: #000080;
@@ -274,16 +274,16 @@ h1{
 #services .services-heading{
     background-color: aliceblue;
     text-align: center;
-    padding: 0px 0 10px 0; 
+    padding: 15px 0 15px 0; 
     margin: 0px 0 20px 0;
 }
 #services .services-heading i{
     color: #000080;
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Andada', serif;
 }
 #services .box{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 #services .box img{
     width: 100%;
@@ -293,7 +293,7 @@ h1{
     position: relative;
     overflow: hidden;
     margin: 0 0 5px 0;
-    border-radius: 10px;
+    border-radius: 0 15px 0 15px;
     box-shadow: 0 0 8px 4px rgba(225, 225, 225, 0.8), 0 0 8px 4px rgba(0, 0, 128, 0.4);
 }
 #services .box .img-box img{
@@ -507,47 +507,26 @@ h1{
 /*---------------feature------------*/
 #feature{
     margin-top: 30px;
-    font-family: 'Source Serif Pro', serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: black;
-}
-#feature .container{
-    background-color: #ffffff;
-    position: relative;
-    overflow: hidden;
-    border-radius: 5px;
-    box-shadow: 0 0px 8px 0 rgba(225, 225, 225, 0.8), 0 0px 20px 0 rgba(0, 0, 128, 0.4);
+    text-align: center;
+    font-size: 14px;
+    line-height: 25px;
 }
 #feature .container .feature-heading{
     background-color: aliceblue;
     text-align: center;
-    padding: 10px 0 10px 0; 
+    padding: 10px 0 10px 0;
     margin: 20px 0 20px 0;
-}
-#feature .container .row{
-    background: aliceblue;
-    border-radius: 0px 0px 5px 5px;
-    padding: 30px 0px 30px 0px;
-}
-#feature .container h5{
-    font-style: italic;
-    font-family: 'Source Serif Pro', serif;
-    text-align: center;
 }
 #feature .container h6{
     color: #000080;
     font-style: italic;
-    font-family: 'Source Serif Pro', serif;
+    font-family: 'Andada', serif;
     text-align: center;
 }
-#feature .container p{
-    font-family: 'Source Serif Pro', serif; 
+#feature h2, h4{
     text-align: center;
-}
-#feature h2{
-    text-align: center;
-    font-family: 'Aldrich', sans-serif;
-}
-#feature h4{
     font-family: 'Aldrich', sans-serif;
 }
 #feature .row .item-img{
@@ -559,34 +538,40 @@ h1{
     display: flex;
     flex-wrap: wrap;
 }
-#feature .feature-flex > div{
-    width: 48%;
-    margin: 10px;
+#feature .feature-flex img{
+    width: 15px;
+    margin-bottom: 4px;
 }
+#feature .feature-flex > div{
+    width: 31%;
+    margin: 10px;
+}/*
 #feature .feature-flex > div:nth-last-child(1){
     width: 100%;
-}
+} */
 
 /*---------------scrolldown-------------*/
 #scrolldown{
-    padding-top: 30px;
-    font-family: 'Source Serif Pro', serif;
+    padding: 30px 0 20px 0;
+    font-family: 'Andada', serif;
     background: whitesmoke;
 }
-#scrolldown .ab-top{
-    color: #000080;
-    padding-top: 20px;
-}
-#scrolldown .row{
-    text-align: center;
-    font-weight: bold;
-}
-#scrolldown .row p{
-    color: black;
-}
-#scrolldown .ag-box{
+#scrolldown .float{
+    place-content: center;
+    position: relative;
+    display: inline-flex;
+    flex-wrap: wrap;
     width: 100%;
-    height: 100%;
+}
+#scrolldown .float i{
+    color: #000080;
+}
+#scrolldown .float a{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#scrolldown .center{
+    text-align: -webkit-center;
+    width: 20%;
 }
 
 /*----------------projects-----------*/
