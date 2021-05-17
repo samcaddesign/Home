@@ -72,6 +72,7 @@ def contact_view(request):
     need_ins = need.objects.all()
     instance_1 = softwares.objects.all()
     instance_2 = services.objects.all()
+    instance_3 = company.objects.all()
     need_list = []
     for obj in need_ins:
         need_dict = {
@@ -97,6 +98,7 @@ def contact_view(request):
             "need": need_list,
             'softwares': instance_1,
             'services': instance_2,
+            'company': instance_3,
             "bg": "lightyellow"
         }
         send_mail('Request Received to us - SAM CADDesign', 'Thanks for Contacting us! We will get back to you soon..!', 'munigopalakrishna@gmail.com', [email], fail_silently=False)
@@ -108,6 +110,7 @@ def contact_view(request):
         "need": need_list,
         'softwares': instance_1,
         'services': instance_2,
+        'company': instance_3,
         "bg": "grey"
     }
     return render(request, "form.html", context)

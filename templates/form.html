@@ -19,24 +19,25 @@
 </main>
 <section id="links">
     <div class="container">
-        <a href="{% url 'base' %}">Home </a> > Contact
+        <a href="{% url 'home' %}">Home </a> > {{title}}
     </div>
 </section><br>
 <section id="contact">
     <div class="container">
         <div class="row" style="padding-bottom: 10px;">
             <div class="col-md-6">
+                {% for data in company %}
                 <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
                     <h2>Registered Address</h2>
                     <div class="row px-3">
                         <div class="col-md-3 col-sm-3"><p><i class="fa fa-map-marker top-6"></i> <strong class="text-dark">Office:</strong></p></div>
                         <div class="col-md-9 col-sm-9 p-0">Vallalar Street, Newpet,<br> Krishnagiri, Tamil Nadu - 635 001.</div>
                         <div class="col-md-3 col-sm-3"><i class="fa fa-phone top-6"></i> <strong class="text-dark">Phone:</strong></div>
-                        <div class="col-md-9 col-sm-9 p-0"><a href="tel:+91-9488705066">+91 94887 05066</a></div>
+                        <div class="col-md-9 col-sm-9 p-0"><a href="tel:{{data.mobile}}">{{data.mobile}}</a></div>
                         <div class="col-md-3 col-sm-3"><i class="fa fa-skype"></i> <strong class="text-dark">Skype:</strong></div>
-                        <div class="col-md-9 col-sm-9 p-0">SAM CADDesign.</div>
+                        <div class="col-md-9 col-sm-9 p-0">{{data.skypeid}}.</div>
                         <div class="col-md-3 col-sm-3"><i class="fa fa-envelope top-6"></i> <strong class="text-dark">Email:</strong></div>
-                        <div class="col-md-9 col-sm-9 p-0"><a href="mailto:admin@samcaddesign.com">admin@samcaddesign.com</a></div>
+                        <div class="col-md-9 col-sm-9 p-0"><a href="mailto:{{data.mailid}}">{{data.mailid}}</a></div>
                     </div>
                 </div><br>                                        
                 <div class="business-hours">
@@ -46,8 +47,9 @@
                     <i class="fa fa-clock-o top-6"></i> Sunday - Closed<br>
                 </div><br>                
                 <div class="embed-responsive embed-responsive-21by9">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d818.8322880236498!2d78.2204445910253!3d12.513194136728007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbd79c388f3376030!2sSAM%20CADDesigns!5e0!3m2!1sen!2sin!4v1603172017339!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="{{data.location}}"  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
                 </div>
+                {%endfor%}
             </div>
             <div class="col-md-6">
                 <div class="overflow-hidden"><h2>Contact Us</h2></div>

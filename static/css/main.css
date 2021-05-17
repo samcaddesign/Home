@@ -9,6 +9,7 @@
 h1{
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 0px !important;
     text-align: center;
     font-family: 'Aldrich', sans-serif;
     background-color: wheat;
@@ -70,27 +71,37 @@ h1{
 }
 
 /*-----------slider---------*/
-#slider h1{
-    margin-bottom: 0%;
+#slider{
+    position: relative;
+    background-color: #efefef;
 }
-#slider .carousel-indicators{
-    bottom: -20px;
-    visibility: visible;
+#slider .container{
+    padding: 50px 0;
 }
-#slider .carousel-caption{
-    text-align: left;
-    top: 20%;
-    font-family: 'Source Serif Pro', serif;
-    letter-spacing: 0.5px;
+#slider .float{
+    display: inline-flex;
+    flex-wrap: wrap;
+    place-content: center;
+    align-items: center;
+    color: black;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
 }
-#slider .carousel-caption h2{
+#slider .float h2{
     font-family: 'Aldrich', sans-serif;
-    text-shadow: 5px 5px 5px #279f9f;
+    font-size: 48px;
+    /* text-shadow: 5px 5px 5px #279f9f; */
+}
+#slider .left{
+    width: 50%;
+}
+#slider .right{
+    width: 35%;
 }
 #slider .btn-primary{
     font-size: 14px;
     padding: 8px 22px;
-    margin-top: 20px;
     background-color: #20B2AA;
     border: none;
     font-family: 'Andada', serif;
@@ -101,15 +112,7 @@ h1{
 .marquee{
     padding-top: 5px;
     color: black;
-    font-family: sans-serif;
-    font-size: larger;
-    visibility: visible;
-    -webkit-animation-duration: 1000ms; 
-    -moz-animation-duration: 1000ms; 
-    animation-duration: 1000ms;
-    -webkit-animation-delay: 300ms; 
-    -moz-animation-delay: 300ms; 
-    animation-delay: 300ms;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .marquee h2{
     text-align: center;
@@ -433,6 +436,7 @@ h1{
 }
 #softwares_id h3, h4, h5{
     font-family: 'Aldrich', sans-serif;
+    text-align: left !important;
     color: black;
 }
 #softwares_id .col-md-3{
@@ -511,7 +515,7 @@ h1{
     color: black;
     text-align: center;
     font-size: 14px;
-    line-height: 25px;
+    line-height: 27px;
 }
 #feature .container .feature-heading{
     background-color: aliceblue;
@@ -525,8 +529,12 @@ h1{
     font-family: 'Andada', serif;
     text-align: center;
 }
-#feature h2, h4{
+#feature h2{
     text-align: center;
+    font-family: 'Aldrich', sans-serif;
+}
+#feature h4{
+    text-align: center !important;
     font-family: 'Aldrich', sans-serif;
 }
 #feature .row .item-img{
@@ -554,7 +562,7 @@ h1{
 #scrolldown{
     padding: 30px 0 20px 0;
     font-family: 'Andada', serif;
-    background: whitesmoke;
+    background: #efefef;
 }
 #scrolldown .float{
     place-content: center;
