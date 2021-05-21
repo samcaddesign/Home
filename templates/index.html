@@ -6,7 +6,7 @@
     <div class="container">
         <div class="float">
             <div class="left">
-                <h2>Hey, SAM!</h2>
+                <h2>Let, start here !</h2>
                 <p>Requirement of High Quality CAD/CAM Services and thinking upon the upcoming design project..!</p>
                 <button type="button" class="btn btn-primary" onclick="location.href='{% url 'contact' %}'">Get here Quote</button>
             </div>
@@ -26,7 +26,7 @@
         {% for data in about %}
         <div class="row">
             <div class="col-md-7 col-sm-12 fadeInLeft">
-                <h2>Experience superior services from <br>SAM CADDesign</h2>
+                <h2>Experience superior services forever</h2>
                 <div class="about-content">
                     {% for description_1 in data.description_1 %}
                         <p>{{description_1}}</p>
@@ -91,74 +91,64 @@
             <div><p><img src="../static/images/color_star.svg"> Our affordable yet premium services help you focus on scaling your core business without compromising on existing one.</p></div>
             <div><p><img src="../static/images/color_star.svg"> In addition to prompt technical support, we go an extra mile and help you make the right decisions, in case you need.</p></div>
         </div>
-      <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="wrap-item">
-            <div class="item-img">
-              <img src="../static/images/ser01.png">
-            </div>
-            <h4 class="pad-bt15">Concept Work</h4>
-            <p>It usually begins with a review of functional requirements and performance metrics. We works closely with our client to ensure that the full design intent is captured and engineering considerations are incorporated at this early stage of development.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="wrap-item text-center">
-            <div class="item-img">
-              <img src="../static/images/ser02.png">
-            </div>
-            <h4 class="pad-bt15">Detailed Design</h4>
-            <p>Besides Conceptual work, Detailed design is often considered the most crucial stage in the design process. After general sizing and structural validation has been completed, localized regions in the project need to be examined and optimized.</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-          <div class="wrap-item text-center">
-            <div class="item-img">
-              <img src="../static/images/ser03.png">
-            </div>
-            <h4 class="pad-bt15">Cost Effective</h4>
-            <p>From verifying that the product is designed for the appropriate lifecycles to minimizing manufacturing costs, we can guide your product to success. Design, Drafting and Analysis will reduce your go-to-market</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
-            <div class="wrap-item text-center">
-                <div class="item-img">
-                <img src="../static/images/ser04.png">
+        <div class="row">
+            <div class="col-md-3 col-sm-12">
+                <div class="wrap-item">
+                    <div class="item-img"><img src="../static/images/ser01.png">
+                    <h4 class="pad-bt15">Concept Work</h4></div>
+                    <p>It usually begins with a review of functional requirements and performance metrics. We works closely with our client to ensure that the full design intent is captured and engineering considerations are incorporated at this early stage of development.</p>
                 </div>
-                <h4 class="pad-bt15">Secure</h4>
-                <p>We give the utmost importance to our customers' confidential data, to ensure that all client data and information sent to us is secure. All our facilities have controlled access entry points, and information is shared on a need-to-know basis with authorized personnel only.</p>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="wrap-item text-center">
+                    <div class="item-img"><img src="../static/images/ser02.png">
+                    <h4 class="pad-bt15">Detailed Design</h4></div>
+                    <p>Besides Conceptual work, Detailed design is often considered the most crucial stage in the design process. After general sizing and structural validation has been completed, localized regions in the project need to be examined and optimized.</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="wrap-item text-center">
+                    <div class="item-img"><img src="../static/images/ser03.png">
+                    <h4 class="pad-bt15">Cost Effective</h4></div>
+                    <p>From verifying that the product is designed for the appropriate lifecycles to minimizing manufacturing costs, we can guide your product to success. Design, Drafting and Analysis will reduce your go-to-market</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-12">
+                <div class="wrap-item text-center">
+                    <div class="item-img"><img src="../static/images/ser04.png">
+                    <h4 class="pad-bt15">Secure</h4></div>
+                    <p>We give the utmost importance to our customers' confidential data, to ensure that all client data and information sent to us is secure. All our facilities have controlled access entry points, and information is shared on a need-to-know basis with authorized personnel only.</p>
+                </div>
             </div>
         </div>
-      </div>
     </div>
 </section><br>
-<section id="scrolldown" class="mt-3">
-    <div class="container no-padding ab-top">
-        <div class="container">
-            <div class="float">
-                {% for data in values %}
-                    <div class="center ag-box">
-                        <i class="{{data.image}} fa-5x" aria-hidden="true"></i><br><br>
-                        <a>{{data.count}}<br>{{data.name}}</a><br><i style="color: #000080;">{{data.quote}}</i>
-                    </div>
-                {%endfor%}
-            </div>
+<section id="scrolldown">
+    <div class="container">
+        <div class="float">
+            {% for data in values %}
+                <div class="center ag-box">
+                    <i class="{{data.image}} fa-5x" aria-hidden="true"></i><br><br>
+                    <a>{{data.count}}<br>{{data.name}}</a><br><i style="color: #000080;">{{data.quote}}</i>
+                </div>
+            {%endfor%}
         </div>
-    </div>   
+    </div>
 </section><br>
 <section id="about">
     <div class="container">
-        {% for data in about %}
         <div class="row">
-            <div class="col-md-6 col-sm-12 m-content">
+            {% for data in about %}
+            <div class="col-md-6 col-sm-12">
                 <h2>Mission</h2>
                 <p>{{data.mission}}</p>
             </div>
-            <div class="col-md-6 col-sm-12 v-content">
+            <div class="col-md-6 col-sm-12">
                 <h2>Vision</h2>
                 <p>{{data.vision}}</p>
             </div>
+            {%endfor%}
         </div>
-        {%endfor%}
     </div>
 </section><br>
 {%endblock content%}  

@@ -16,6 +16,7 @@ class company (models.Model):
 class members (models.Model):
     name = models.CharField(max_length=50)
     designation = models.CharField(max_length=50, null=True)
+    image = models.ImageField(default=True)
     profile = models.CharField(max_length=50, null=True)
     twitter = models.CharField(max_length=100, blank=True)
     linkedin = models.CharField(max_length=100, blank=True)

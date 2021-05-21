@@ -73,7 +73,7 @@ h1{
 /*-----------slider---------*/
 #slider{
     position: relative;
-    background-color: #efefef;
+    background: -webkit-linear-gradient(90deg, rgb(119, 114, 114, 0.7), rgb(255, 255, 255, 1));
 }
 #slider .container{
     padding: 50px 0;
@@ -113,6 +113,8 @@ h1{
     padding-top: 5px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.6px;
 }
 .marquee h2{
     text-align: center;
@@ -128,6 +130,7 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     line-height: 27px;
+    letter-spacing: 0.6px;
     color: black;
     margin-top: 20px;
 }
@@ -162,9 +165,6 @@ h1{
     text-indent: 50px;
     text-align: justify;
 }
-#about i{
-    font-size: large;
-}
 
 /*--------------swiper------------*/
 /* #swiper .container{
@@ -195,22 +195,24 @@ h1{
 }
 
 /*--------------profiles-----------*/
+#profiles .swiper-slide{
+    background-position: center;
+    background-size: cover;
+    background: #efefef;
+    border-radius: 0 90px 0 0;
+    align-items: center;
+    width: 260px;
+    height: 380px;
+    overflow: hidden;
+}
+#profiles h5, .info{
+    text-align: center !important;
+}
 #profiles h2{
     font-family: 'Aldrich', sans-serif;
 }
-#profiles .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    background-color: wheat;
-    width: 260px;
-    height: 390px;
-    text-align: center;
-    border: 1px solid #000080;
-    border-radius: 0 15px 0 15px;
-    overflow: hidden;
-}
 #profiles .info h6{
-    font-family: 'Andada', serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #profiles .info a{
     color: black;
@@ -221,6 +223,13 @@ h1{
 #profiles .swiper-pagination{
     position: relative;
     bottom: 0px;
+}
+#profiles .img-box{
+    height: 205px;
+    background: wheat;
+    border: 2px solid #000080;
+    border-radius: 0 90px;
+    overflow: hidden;
 }
 
 /*-----------services--------------*/
@@ -357,6 +366,7 @@ h1{
     color: black;
     font-size: 14px;
     line-height: 27px;
+    letter-spacing: 0.6px;
     overflow: hidden;
     position: relative;
 }
@@ -423,6 +433,7 @@ h1{
     color: black;
     font-size: 14px;
     line-height: 27px;
+    letter-spacing: 0.6px;
     overflow: hidden;
     position: relative;
 }
@@ -506,6 +517,7 @@ h1{
     font-family: 'Andada', serif;
     color: black;
     font-size: 14px;
+    letter-spacing: 0.7px;
 }
 
 /*---------------feature------------*/
@@ -516,6 +528,7 @@ h1{
     text-align: center;
     font-size: 14px;
     line-height: 27px;
+    letter-spacing: 0.6px;
 }
 #feature .container .feature-heading{
     background-color: aliceblue;
@@ -529,17 +542,20 @@ h1{
     font-family: 'Andada', serif;
     text-align: center;
 }
-#feature h2{
-    text-align: center;
-    font-family: 'Aldrich', sans-serif;
-}
-#feature h4{
+#feature h2, h4{
     text-align: center !important;
     font-family: 'Aldrich', sans-serif;
 }
+#feature .wrap-item{
+    border: 2px solid #000080;
+    border-radius: 0 10px 0 10px;
+    overflow: hidden;
+    height: 370px;
+}
 #feature .row .item-img{
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 7px;
+    background-color: aliceblue;
 }
 #feature .feature-flex{
     position: relative;
@@ -548,21 +564,21 @@ h1{
 }
 #feature .feature-flex img{
     width: 15px;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 #feature .feature-flex > div{
-    width: 31%;
+    width: 48%;
     margin: 10px;
-}/*
+}
 #feature .feature-flex > div:nth-last-child(1){
     width: 100%;
-} */
+}
 
 /*---------------scrolldown-------------*/
 #scrolldown{
+    position: relative;
     padding: 30px 0 20px 0;
     font-family: 'Andada', serif;
-    background: #efefef;
 }
 #scrolldown .float{
     place-content: center;
@@ -624,6 +640,7 @@ h1{
 #contact {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14.7px;
+    letter-spacing: 0.6px;
 }
 #contact .container-fluid {
     background-color: #f8f8f8;
@@ -639,8 +656,9 @@ h1{
     color: #000080;
     text-decoration: underline;
 }
-#contact .col-md-3 i{
+#contact .row .col-md-3 i{
     text-indent: 30px;
+    color: #000080;
 }
 #contact .business-hours i{
     text-indent: 30px;

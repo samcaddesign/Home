@@ -24,20 +24,20 @@
 </section><br>
 <section id="contact">
     <div class="container">
-        <div class="row" style="padding-bottom: 10px;">
+        <div class="row">
             <div class="col-md-6">
                 {% for data in company %}
                 <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
                     <h2>Registered Address</h2>
-                    <div class="row px-3">
-                        <div class="col-md-3 col-sm-3"><p><i class="fa fa-map-marker top-6"></i> <strong class="text-dark">Office:</strong></p></div>
-                        <div class="col-md-9 col-sm-9 p-0">Vallalar Street, Newpet,<br> Krishnagiri, Tamil Nadu - 635 001.</div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-map-marker top-6"></i> <strong class="text-dark">Office:</strong></div>
+                        <div class="col-md-9 col-sm-9">Vallalar Street, Newpet,<br> Krishnagiri, Tamil Nadu - 635 001.</div>
                         <div class="col-md-3 col-sm-3"><i class="fa fa-phone top-6"></i> <strong class="text-dark">Phone:</strong></div>
-                        <div class="col-md-9 col-sm-9 p-0"><a href="tel:{{data.mobile}}">{{data.mobile}}</a></div>
+                        <div class="col-md-9 col-sm-9"><a href="tel:{{data.mobile}}">{{data.mobile}}</a></div>
                         <div class="col-md-3 col-sm-3"><i class="fa fa-skype"></i> <strong class="text-dark">Skype:</strong></div>
-                        <div class="col-md-9 col-sm-9 p-0">{{data.skypeid}}.</div>
+                        <div class="col-md-9 col-sm-9">{{data.skypeid}}.</div>
                         <div class="col-md-3 col-sm-3"><i class="fa fa-envelope top-6"></i> <strong class="text-dark">Email:</strong></div>
-                        <div class="col-md-9 col-sm-9 p-0"><a href="mailto:{{data.mailid}}">{{data.mailid}}</a></div>
+                        <div class="col-md-9 col-sm-9"><a href="mailto:{{data.mailid}}">{{data.mailid}}</a></div>
                     </div>
                 </div><br>                                        
                 <div class="business-hours">
