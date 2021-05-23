@@ -101,7 +101,12 @@ def contact_view(request):
             'company': instance_3,
             "bg": "lightyellow"
         }
-        send_mail('Request Received to us - SAM CADDesign', 'Thanks for Contacting us! We will get back to you soon..!', 'munigopalakrishna@gmail.com', [email], fail_silently=False)
+        send_mail(
+            'Request Received to us - SAM CADDesign',
+            'Thanks for Contacting us! We will get back to you soon..!',
+            settings.EMAIL_HOST_USER,
+            [email],
+            fail_silently=False)
         return render(request, "form.html", contextq)
    
     context = {

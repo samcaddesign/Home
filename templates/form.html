@@ -55,12 +55,10 @@
                 <div class="overflow-hidden"><h2>Contact Us</h2></div>
                 {% if first_name %}
                 <center>
-                    <h2>Hai, {{first_name}}</h2>
+                    <h3 style="text-align: center;">Hai, {{first_name}}</h3>
                     <p>We receive your request and will repond shortly..!</p>
                     <img class="w-50" src="../static/images/contact.png" alt="Contact">
-                    <div class="thankyou_message">
-                        <h4><em>Thanks for contacting us..!</em></h4>
-                    </div>
+                    <h4 style="text-align: center;"><em>Thanks for contacting us..!</em></h4>
                     <a href="{% url 'contact' %}">Click here</a> to redirect
                 </center><br>
                 {% else %}
@@ -113,9 +111,9 @@
                         <button type="submit" name="submit">Submit</button>
                         <!-- Customise the Thankyou Message People See when they submit the form: -->                        
                     </form>
-                </div>                    
+                </div>
+                {% endif %}
             </div>
-            {% endif %}
         </div>
     </div>
 </section><br>
