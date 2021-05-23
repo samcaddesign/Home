@@ -3,20 +3,18 @@
 {% load static %}
 {%block content%}
 <link rel="stylesheet" href="{% static 'css/swiper.min.css' %}" type="text/css">
-<main>
-    <div id="slider">
-        <div id="header-slider" class="carousel slide corousel-fade" data-ride="carousel">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" style="background-color: wheat;">
-                        <img class="d-block w-100" src="../static/images/body-slider-7.jpg" alt="about-image"></img>
-                    </div>
-                </div>
+<section id="slider">
+    <div class="container">
+        <div class="float">
+            <div class="left">
+                <h2>Aboutus</h2>
             </div>
-            <h1>Let you Know us  ...  !!!</h1>
+            <div class="right">
+                <img class="d-block w-100" src="../static/images/signature.png" alt="carousel"></img>
+            </div>
         </div>
     </div>
-</main>
+</section>
 <section id="links">
     <div class="container">
         <a href="{% url 'home' %}">Home </a> > About Us
