@@ -27,11 +27,11 @@
                         {%if data.services_active%}
                         <div class="col-md-3 col-xs-6 box">
                             <div class="img-box">
-                                <a href="{% url 'services_id' data.id%}">
+                                <a href="{% url 'services_id' data.name %}">
                                     <img src="{{data.thumb_image.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
                                 </a>
                             </div>
-                            <a href="{% url 'services_id' data.id%}">{{data.name}}</a>
+                            <a href="{% url 'services_id' data.name %}">{{data.name}}</a>
                         </div>
                         {%endif%}                                                
                     {%endfor%}   

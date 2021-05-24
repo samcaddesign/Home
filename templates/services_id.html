@@ -31,7 +31,7 @@
                         <div class="col-md-12">
                             {% for data in services %}
                                 {%if data.services_active %}
-                                    <a class="show" href="{% url 'services_id' data.id %}">{{data.name}}</a><br>
+                                    <a class="show" href="{% url 'services_id' data.name %}">{{data.name}}</a><br>
                                 {%endif%}
                             {%endfor%}
                         </div>

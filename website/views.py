@@ -31,8 +31,8 @@ def about_view(request):
     }
     return render(request, "about.html", context)
 
-def serivces_id(request, id):
-    instance = services.objects.get(pk=id)
+def serivces_id(request, serviceName):
+    instance = services.objects.get(name=serviceName)
     instance_0 = services.objects.all()
     instance_1 = softwares.objects.all()
     name = instance.name
@@ -131,8 +131,8 @@ def softwares_view(request):
     return render(request, "softwares.html", context)
 
 
-def softwares_id(request, id):
-    instance = softwares.objects.get(pk=id)
+def softwares_id(request, softwareName):
+    instance = softwares.objects.get(name=softwareName)
     instance_0 = services.objects.all()
     instance_1 = softwares.objects.all()
     instance_2 = instance.head.all()

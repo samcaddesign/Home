@@ -27,11 +27,9 @@
         <div class="row">
             <div class="col-md-7 col-sm-12 fadeInLeft">
                 <h2>Experience superior services forever</h2>
-                <div class="about-content">
-                    {% for description_1 in data.description_1 %}
-                        <p>{{description_1}}</p>
-                    {%endfor%}
-                </div>
+                {% for description_1 in data.description_1 %}
+                    <p>{{description_1}}</p>
+                {%endfor%}
                 <button type="button" class="btn btn-primary" onclick="location.href='{% url 'aboutus' %}'">Know more</button>&nbsp; &nbsp; &nbsp; &nbsp;
                 <button type="button" class="btn btn-primary" onclick="location.href='{% url 'contact' %}'">Contact Us</button>
             </div>

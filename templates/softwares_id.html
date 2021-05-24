@@ -32,7 +32,7 @@
                         <div class="col-md-12">
                             {% for data in softwares %}
                                 {%if data.softwares_active %}
-                                    <a class="show" href="{% url 'softwares_id' data.id %}"><i class="fa fa-gear" aria-hidden="true"></i> &nbsp; {{data.name}}</a><br>
+                                    <a class="show" href="{% url 'softwares_id' data.name %}"><i class="fa fa-gear" aria-hidden="true"></i> &nbsp; {{data.name}}</a><br>
                                 {%endif%}
                             {%endfor%}
                         </div>
@@ -62,19 +62,18 @@
                     </div>
                     <p>{{description_4}}</p>
                     <h4>Features & Objectives :</h4>                        
-                            <div class="inline">
-                                {% for data in head %}
-                                <div class="float">
-                                    <h5>{{data.head}}</h5>
-                                    <ul>
-                                        {% for content in data.content %}
-                                        <li>{{content}}</li>
-                                        {%endfor%}
-                                    </ul>
-                                </div>
+                    <div class="inline">
+                        {% for data in head %}
+                        <div class="float">
+                            <h5>{{data.head}}</h5>
+                            <ul>
+                                {% for content in data.content %}
+                                <li>{{content}}</li>
                                 {%endfor%}
-                            </div>
+                            </ul>
                         </div>
+                        {%endfor%}
+                    </div>
                 </div>
             </div>           
         </div>

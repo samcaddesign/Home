@@ -20,26 +20,24 @@
         </div>
     </section><br>
     <section id="softwares">
-        <div class="container-fluid home-product">
-            <div class="container">
-                <div class="row">
-                    {% for data in softwares %}
-                        <div class="col-md-2 col-xs-6 box">
-                            <div class="img-box">
-                                <a href="{% url 'softwares_id' data.id %}">
-                                    <img src="{{data.logo.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
-                                </a>
-                            </div>
-                            <a href="{% url 'softwares_id' data.id %}">{{data.name}}</a>
+        <div class="container">
+            <div class="row">
+                {% for data in softwares %}
+                    <div class="col-md-2 col-sm-6 box">
+                        <div class="img-box">
+                            <a href="{% url 'softwares_id' data.name %}">
+                                <img src="{{data.logo.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
+                            </a>
                         </div>
-                    {%endfor%}
-                </div><br>
-                <p><strong>Disclaimer : </strong>
-                    <i>All product and company names are trademarks™ or registered® trademarks of their 
-                    respective holders. Use of these product and company names on this page does not imply any endorsement or our 
-                    affiliation with them. All the mentions only imply that our services are compliant to the above-listed products 
-                    in entirety.</i></p>
-            </div>
+                        <a href="{% url 'softwares_id' data.name %}">{{data.name}}</a>
+                    </div>
+                {%endfor%}
+            </div><br>
+            <p style="font-family: monospace;"><strong>Disclaimer : </strong>
+                <i>All product and company names are trademarks™ or registered® trademarks of their 
+                respective holders. Use of these product and company names on this page does not imply any endorsement or our 
+                affiliation with them. All the mentions only imply that our services are compliant to the above-listed products 
+                in entirety.</i></p>
         </div>
     </section><br>
 {%endblock content%}

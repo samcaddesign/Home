@@ -159,7 +159,7 @@ h2, h3, h4, h5{
     color: black;
     border-radius: 5px;
 }
-#about .about-content{
+#about p{
     text-indent: 50px;
     text-align: justify;
 }
@@ -194,8 +194,9 @@ h2, h3, h4, h5{
 #profiles .swiper-slide{
     background-position: center;
     background-size: cover;
-    background: #efefef;
-    border-radius: 0 90px 0 0;
+    background: #d3d3d3;
+    border: 1px solid #808080;
+    border-radius: 0 90px 0 50px;
     align-items: center;
     width: 260px;
     height: 380px;
@@ -327,7 +328,7 @@ h2, h3, h4, h5{
 }
 #softwares .box{
     text-align: center;
-    margin-bottom: 20px;
+    margin: 10px 20px 20px 18px;
 }
 #softwares .box img{
     width: 100%;
@@ -463,7 +464,8 @@ h2, h3, h4, h5{
 }
 #softwares_id .float{
     padding-right: 20px;
-    width: 50%;
+    width: max-content;
+    min-width: 50%;
     float: left;
 }
 #softwares_id ul li{

@@ -9,10 +9,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('aboutus', about_view, name="aboutus"),
     path('services', services_view, name="services"),
-    path('services/<str:id>', serivces_id, name="services_id"),
+    path('services/<str:serviceName>', serivces_id, name="services_id"),
     path('contact', contact_view, name="contact"),
     path('softwares', softwares_view, name="softwares"),
-    path('softwares/<str:id>', softwares_id, name="softwares_id"),
+    path('softwares/<str:softwareName>', softwares_id, name="softwares_id"),
     path('', home_view, name="home"),
     path('base', base_view, name="base")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

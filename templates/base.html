@@ -38,7 +38,7 @@
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             {% for data in softwares %}
                                                 {% if data.softwares_active %}
-                                                    <a class="dropdown-item" href="{% url 'softwares_id' data.id %}">{{data.name}}</a>
+                                                    <a class="dropdown-item" href="{% url 'softwares_id' data.name %}">{{data.name}}</a>
                                                 {% endif %}
                                             {%endfor%}
                                         </div>
@@ -52,7 +52,7 @@
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             {% for data in services %}
                                                 {%if data.services_active %}
-                                                    <a class="dropdown-item" href="{% url 'services_id' data.id%}">{{data.name}}</a>
+                                                    <a class="dropdown-item" href="{% url 'services_id' data.name %}">{{data.name}}</a>
                                                 {%endif%}
                                             {%endfor%}
                                         </div>
