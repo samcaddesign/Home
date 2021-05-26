@@ -55,11 +55,13 @@
                 <div class="overflow-hidden"><h2>Contact Us</h2></div>
                 {% if first_name %}
                 <center>
+                <div class="thankyou_message">
                     <h3 style="text-align: center;">Hai, {{first_name}}</h3>
                     <p>We receive your request and will repond shortly..!</p>
                     <img class="w-50" src="../static/images/contact.png" alt="Contact">
                     <h4 style="text-align: center;"><em>Thanks for contacting us..!</em></h4>
                     <a href="{% url 'contact' %}">Click here</a> to redirect
+                </div>
                 </center><br>
                 {% else %}
                 <div class="container-fluid">
@@ -108,7 +110,7 @@
                         <textarea id="form_message" name="message" class="form-control" placeholder="Message for us" rows="6" required="required" data-error="Please, leave us a message."></textarea>
                         <div class="help-block with-errors"></div><br>
 
-                        <button type="submit" name="submit">Submit</button>
+                        <button type="submit" name="submit">Submit Here</button>
                         <!-- Customise the Thankyou Message People See when they submit the form: -->                        
                     </form>
                 </div>

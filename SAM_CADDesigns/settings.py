@@ -26,7 +26,7 @@ SECRET_KEY = '#&1(5_igu752)z_ewe73%$#g!ig&lxn_1a42=*t9w0)5km%^jk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['13.58.22.107', '172.31.14.149', '3.136.168.112', 'localhost', 'www.samcaddesign.com', 'samcaddesign.com', '*']
 
 
 # Application definition

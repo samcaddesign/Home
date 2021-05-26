@@ -106,7 +106,15 @@ def contact_view(request):
             'Thanks for Contacting us! We will get back to you soon..!',
             settings.EMAIL_HOST_USER,
             [email],
-            fail_silently=False)
+            fail_silently=False
+        )
+        send_mail(
+            'Customer request - '+ firstname + lastname,
+            number + need_value + message,
+            'munigopalakrishna@gmail.com',
+            ['info@samcaddesign.com'],
+            fail_silently=False
+        )
         return render(request, "form.html", contextq)
    
     context = {
