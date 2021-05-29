@@ -19,7 +19,7 @@
     <div class="container">
         <a href="{% url 'home' %}">Home </a> > About Us
     </div>
-</section><br>
+</section>
 <section id="about">
     <div class="container">
         {% for data in about %}
@@ -34,7 +34,7 @@
                     <img class="d-block w-100" src="../static/images/discussions.png" alt="mission-vision"></img>
                 </div>
             </div>
-            <div class="row">
+            <div class="row float">
                 <div class="col-md-5 col-sm-12 fadeInLeft">
                     <img class="d-block w-100" src="../static/images/satisfication.png" alt="mission-vision"></img>
                 </div>
@@ -63,12 +63,12 @@
                 {%endfor%}
             </div>
             <div class="col-md-5 col-sm-12">
-                <img class="d-block w-100 pt-4" src="../static/images/security.png" alt="security"></img>
+                <img class="d-block w-100" src="../static/images/security.png" alt="security"></img>
             </div>            
             {%endfor%}
         </div>
     </div>
-</section><br>
+</section>
 <section class="container">
     <div class="row">
         <div class="col-md-6 col-sm-12">
@@ -119,18 +119,18 @@
     <div class="container">
         {% for data in about %}
         <div class="row">
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-4 col-sm-12">
                 <img class="d-block" src="../static/images/mission-vision.png" alt="mission-vision"></img>
             </div>
-            <div class="col-md-9 col-sm-12">
+            <div class="col-md-8 col-sm-12">
                 <h2>Mission</h2>
                 <p>{{data.mission}}</p>
                 <h2>Vision</h2>
                 <p>{{data.vision}}</p>
             </div>
-        </div><br>
+        </div>
         <div style="font-family: monospace; text-align: justify;">
-            <a style="text-decoration: underline;">​<em>Legal Disclaimer: </em></a>
+            <a style="text-decoration: underline;">​<em>Legal Disclaimer:</em></a>
             <a><em>​ {{data.disclaimer}}</em></a>
         </div>
         {%endfor%}

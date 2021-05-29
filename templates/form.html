@@ -29,7 +29,7 @@
                 {% for data in company %}
                 <div class="appear-animation" data-appear-animation="fadeIn" data-appear-animation-delay="800">
                     <h2>Registered Address</h2>
-                    <div class="row">
+                    <div class="row p-0">
                         <div class="col-md-3 col-sm-3"><i class="fa fa-map-marker top-6"></i> <strong class="text-dark">Office:</strong></div>
                         <div class="col-md-9 col-sm-9">Vallalar Street, Newpet,<br> Krishnagiri, Tamil Nadu - 635 001.</div>
                         <div class="col-md-3 col-sm-3"><i class="fa fa-phone top-6"></i> <strong class="text-dark">Phone:</strong></div>
@@ -39,14 +39,14 @@
                         <div class="col-md-3 col-sm-3"><i class="fa fa-envelope top-6"></i> <strong class="text-dark">Email:</strong></div>
                         <div class="col-md-9 col-sm-9"><a href="mailto:{{data.mailid}}">{{data.mailid}}</a></div>
                     </div>
-                </div><br>                                        
+                </div>
                 <div class="business-hours">
                     <h2>Business Hours</h2>
                     <i class="fa fa-clock-o top-6"></i> Monday to Friday - 10am to 7pm<br>
                     <i class="fa fa-clock-o top-6"></i> Saturday - 10am to 3pm<br>
                     <i class="fa fa-clock-o top-6"></i> Sunday - Closed<br>
-                </div><br>                
-                <div class="embed-responsive embed-responsive-21by9">
+                </div><br>
+                <div class="embed-responsive embed-responsive-21by9 mb-4">
                     <iframe src="{{data.location}}"  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
                 </div>
                 {%endfor%}
@@ -65,10 +65,10 @@
                 </center><br>
                 {% else %}
                 <div class="container-fluid">
-                    <div class="overflow-hidden pt-3" style="text-align: center; letter-spacing: 0.4px;">
-                        <center style="color: #000080;"><i><b>Hi, there. Feel free to say your need us</b></i></center><br>
+                    <div class="overflow-hidden pt-3" style="text-align: center;">
+                        <center style="color: #20B2AA;"><i><b>Hi, there. Feel free to say your need us</b></i></center>
                         <i>Simply, fill up the following form and this has been received directly by the admin head. 
-                            We will contact you within <b style="color: #000080;">24 hours</b></i>
+                            We will contact you within <b style="color: #20B2AA;">24 hours</b></i>
                     </div>
                     <form id="contact-form" method="POST" class="gform pure-form pure-form-stacked py-3">
                     {%csrf_token%}

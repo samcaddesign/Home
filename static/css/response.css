@@ -1,48 +1,105 @@
 @media only screen and (max-width:425px){
     
-    /*---------slider-------------*/
-    #slider .carousel-caption{
-        position: absolute;
-        text-align: left;
-        font-size: x-small;
-        top: 15px;
-        left: 45px;
+    /*--------slider-----------*/
+    #slider .float{        
+        flex-wrap: wrap-reverse;
     }
-    #slider .carousel-item img{
-        height: 150px;
+    #slider .float h2{
+        font-size: 32px;
     }
-    #slider .carousel-caption h2{
-        font-size: small;
-        font-size: revert;
+    #slider p{
+        font-size: 16px;
     }
-    #slider .btn-primary{
-        font-size: small;
-        padding: 2px 10px;
-        margin-top: 7px;
+    #slider .left{
+        width: 80%;
     }
-
-    /*----------marquee----------*/
-    .marquee h6{
-        font-size: small;
-        letter-spacing: 1px;
+    #slider .right{
+        margin-bottom: 20px;
+        width: 80%;
+    }
+    #slider .float img{
+        width: 100%;
     }
 
-    /*-------------softwares-solidworks-------*/
-    #softwares-solidworks .col-md-12{
+    /*----------about---------*/
+    #about .float{
+        flex-wrap: wrap-reverse;
+    }
+    #about .col-md-5 img{
+        margin-top: 20px;
+    }
+
+    /*-------------softwares-------*/
+    #softwares .box{
         width: 50%;
+        margin: 10px 0px;
     }
-    #softwares-solidworks .col-md-3 img{
-        width: 50% !important;
+    #softwares .row{
+        padding-bottom: 15px;
     }
 
-    /*---------leadership---------*/
-    #leadership .row img{
-        padding-left: 30px;
-        padding-top: 10px;
+    /*--------services---------*/    
+    #services .services-heading i{
+        font-size: 12px;
     }
-    #leadership .col-md-9{
-        padding-left: 0px;
+
+    /*-----------softwares_id--------*/
+    #softwares_id .ag-box{
+        margin: 20px;
     }
+    #softwares_id .col-md-9{
+        padding-left: 20px;
+    }
+    #softwares_id .row h2{    
+        background-color: #ffffff;
+        border: none;
+        border-radius: 0px;
+    }
+
+    /*--------services_id---------*/
+    #services_id .ag-box{
+        margin: 20px;
+    }
+    #services_id .col-md-9{
+        padding-left: 20px;
+    }
+    #services_id .row h2{
+        background-color: #ffffff;
+        border: none;
+        border-radius: 0px;
+    }
+
+    /*----------feature---------*/
+    #feature h6{
+        font-size: 12px;
+    }    
+    #feature .wrap-item{
+        border: none;
+        border-radius: 0px;
+        margin-bottom: 10px;
+        height: fit-content;
+    }
+    #feature .container .col-sm-6{        
+        border-bottom: 1px solid #000080;
+    }
+    
+    /*--------swiper----------*/    
+    #swiper{
+        margin: 15px 0px 5px 0px;
+    }
+    #swiper .progress{
+        margin-bottom: 7px;
+    }
+
+    /*----------scrolldown----------*/
+    #scrolldown .float{
+        font-size: 13px;
+    }
+    #scrolldown .center{
+        width: 50%;
+        padding-bottom: 20px;
+    }
+
     /*-----------footer----------*/
     #footer .col-md-3 a{
         margin-left: 10px;
@@ -56,21 +113,12 @@
 }
 @media only screen and (max-width:768px){
     
-    #h1 h1{
-        font-size: x-large;
-        font-weight: bold;
-    }
-
     /*-----------header----------*/
+    #hearder a{
+        font-size: 13px;
+    }
     #header .navbar-brand{
         padding-left: 0rem;
-    }
-    #header .dropdown-menu{
-        border-radius: 0px;
-        border-left: none;
-        border-right: none;
-        border-bottom: none;
-        border-top: 1px solid #000080;
     }
     #header .nav-item{
         padding: 0.5em;
@@ -78,37 +126,32 @@
     #header .company-name{
         width: 75%;
     }
-    #header .company-name img{
-        width: 100%;
+    #header .navbar-toggler{
+        padding: 0px;
     }
     #header .navbar-toggler img{
         width: 70%;
         height: 70%;
     }
-    
+
+    /*----------marquee----------*/
+    .marquee h6{
+        font-size: 12px;
+    }
+
     /*--------------about----------*/
     #about{
-        font-size: small;
-        padding-bottom: 10px;
-        margin: 10px 10px;
+        padding-bottom: 0px;
+        font-size: 13px;
     }
-    #about a{
-        font-size: small;
-    }
-    #about .about-content{
-        text-indent: 20px;
-        padding-top: 10px;
+    #about .container{
+        padding-bottom: 0px;
     }
     #about h2{
-        font-size: x-large;
-    }
-    #about .about-content i{
-        font-size: small;
+        font-size: 25px;
     }
     #about .btn-primary{
-        font-size: small;
-        padding: 5px 5px;
-        margin-top: 10px;
+        margin-top: 0px;
     }
     #about .progress{
         margin: 8px 0px;
@@ -117,272 +160,236 @@
         padding-top: 15px;
         padding-bottom: 15px;
     }
-
-    /*--------------contact-------------*/
-    #contact{
-        font-size: small;
-    }
-    * label{
-        margin-top: 10px;
-    }
-    #contact .row h2{
-        font-size: x-large;
-    }
-    #contact .col-md-3 i{
-        text-indent: 0px;
-    }
-    #contact .business-hours i{
-        text-indent: 0px;
-    }
-    #contact .col-sm-3{
-        width: 30%;
-    }
-    #contact .col-sm-9{
-        width: 70%;
+    #about .col-md-8{
+        padding-top: 10px;
     }
 
-    /*-----------services---------*/
-    #services .container{
-        width: auto;
-        margin-left: 8px;
-        margin-right: 8px;
+    /*---------swiper-----------*/
+    #swiper h2{
+        font-size: 25px;
     }
-    #services .row a{
-        font-size: small;
-    }
-    #services .services-heading h2{
-        font-size: x-large;
-    }
-    #services .services-heading i{
-        font-size: small;
-    }
-    #services .col-md-3{
-        width: 50%;
-        height: 50%;
-    }
-    #services .parallax{
-        height: 250px;
-    }
-    #services .parallax .parallax-info{
-        padding: 3rem 0 0 10px;
-        font-size: small;
-    }
-    #services .parallax .parallax-info h2{
-        font-size: medium;
-    }
-    #services .parallax .parallax-info .parallax-style{
-        padding: 10px 10px 3px 10px;
-    }
-    #services .parallax .parallax-info .parallax-style img{
-        width: 11px !important;
-    }
-
-
-    /*---------------feature-----------*/
-    #feature .container{
-        width: auto;
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-    #feature h2{
-        font-size: x-large;
-    }
-    #feature .feature-heading h6{
-        font-size: small;
-    }
-    #feature .feature-flex h5{
-        font-size: small;
-    }
-    #feature .feature-flex > div{
-        width: auto;
-        margin: 5px;
-    }
-    #feature .feature-heading img{
-        width: 25px !important;
-    }
-    #feature .feature-flex img{
-        width: 12px !important;
-    }
-    #feature .row .col-md-3{
-        width: 50%;
-        padding: 0 3px 0 3px;
-    }
-    #feature .row .col-md-3 .wrap-item{
-        height: 100%;
-        border: 2px solid #000080;
-        border-radius: 5px;
-    }
-    #feature .row img{
-        width: 50px;
-    }
-    #feature .container .row{
-        padding: 0px 0px 30px 0px;
-    }
-    #feature .row h4{
-        font-size: medium;
-    }
-    #feature .container .row .col-xs-12{
-        margin-top: 20px;
+    #swiper h6{
+        font-size: 13px;
     }
     
-
-    /*----------scrolldown----------*/
-    #scrolldown .row{
-        font-size: x-small;
-    }
-    #scrolldown .ab-top{
-        padding: 1px;
-    }
-    #scrolldown .row p{
-        margin-top: -10px;
-    }
-    #scrolldown .ag-box{
-        width: 50%;
-    }
-
-    /*---------softwares-lists----------*/
-    #softwares-list{
-        padding-top: 0px;
-    }
-    #softwares-list .ag-box{
-        font-size: small;
-    } 
-    #softwares-lists .col-xs-2{
-        width: 50%;
-        height: 50%;
-        margin-bottom: 10px;
-    }
-    #softwares-lists .row a{
-        font-size: small;
-    }
-    #softwares-lists .row p{
-        margin-top: 5px;
-    }
-
-    /*------------softwares-solidworks-------*/
-    #softwares-solidworks{
-        padding-top: 10px;
-    }
-    #softwares-solidworks p{
-        font-size: small;
-    }
-    #softwares-solidworks .row h2{
-        padding-top: 10px;
-        font-size: xx-large;
-    }
-    #softwares-solidworks .ag-box a{
-        font-size: small;
-    }
-    #softwares-solidworks h3, h4{
-        font-size: medium;
-    }
-    #softwares-solidworks h5{
-        font-size: medium;
-    }
-    #softwares-solidworks .row ul li{
-        text-indent: 10px;
-        font-size: small;
-    }
-    #softwares-solidworks .row p{
-        text-indent: 20px;
-    }
-
-    /*-----------leadership-------*/
-    #leadership {
-        font-size: small;
-        font-family: 'Source Serif Pro', serif;
-    }
-    #leadership .col-md-9{
-        border-left: none !important;
-        width: auto;
-    }
-    #leadership h2{
-        font-size: xx-large;
-        font-family: 'Aldrich', sans-serif;
-    }
-    #leadership .row h5{
-        font-size: medium;
-    }
-    #leadership .row p{
-        font-size: medium;
-    }
-    #leadership .col-xs-3{
-        width: 40%;
-    }
-    #leadership .col-xs-9{
-        width: 60%;
-    }
-
-    /*------------------projects-----------*/
-    #projects{
-        font-size: small;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    #projects .row{
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-    #projects .row p{
-        text-indent: 0px;
-    }
-    #projects .row h2{
-        font-size: xx-large;
-    }
-    #projects .row h4{
-        font-size: large;
-        font-weight: bold;
-    }
-    #projects .row h3, h4{
-        font-size: medium;
-    }
-    #projects .row h5, h6{
-        font-size: initial;
-    }
-    #projects .row img{
-        width: 100%;
-    }
     /*------------profiles---------*/
-    #profiles{
-        font-size: small;
+    #profiles .swiper-slide{
+        height: max-content;
     }
     #profiles h2{
         margin-top: 20px;
         margin-bottom: 10px;
+        font-size: 25px;
+    }
+    #profiles h5{
+        font-size: 18px;
+    }
+    #profiles h6{
+        font-size: 13px;
+    }
+
+    /*--------------contact-------------*/
+    #contact{
+        font-size: 13px;
+    }
+    #contact label{
+        margin-top: 10px;
+    }
+    #contact .row h2{
+        font-size: 25px;
+    }
+    #contact .business-hours i{
+        text-indent: 20px;
+    }
+    #contact .col-sm-3{
+        width: 30%;
+        padding-right: 0px;
+    }
+    #contact .col-sm-9{
+        width: 70%;
+        padding-left: 5px;
+    }
+    
+    /*---------links---------*/
+    #links .container{
+        font-size: 12px;
+    }
+    #links{
+        margin-bottom: 0px;
+    }
+
+    /*-----------services---------*/    
+    #services .container{
+        padding-bottom: 0px;
+    }
+    #services h2{
+        font-size: x-large;
+    }
+    #services .row a{
+        font-size: 12px;
+    }
+    #services .box{
+        width: 50%;
+        line-height: 14px;
+        padding: 0 10px;
+    }
+    #services .parallax{
+        height: 250px;
+        line-height: 20px;
+    }
+    #services .parallax .parallax-info{
+        padding-top: 0%;
+        width: 250px;
+    }
+    #services .parallax .parallax-info h2{
+        font-size: medium;
+    }
+    #services .parallax .parallax-info ul li{
+        font-size: 12px;
+    }
+    #services .parallax .parallax-info .parallax-style{
+        padding: 10px 10px 3px 10px;
+    }
+
+    /*---------softwares----------*/
+    #softwares p{
+        font-size: 13px;
+    }
+    #softwares .container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #softwares .box{
+        line-height: 14px;
+    }
+    #softwares .row a{        
+        font-size: 12px;
+    }
+
+    /*------------softwares-id-------*/
+    #softwares_id{
+        padding-top: 10px;
+    }
+    #softwares_id .row p{
+        font-size: 13px;
+    }
+    #softwares_id ul li{
+        font-size: 13px;
+    }
+    #softwares_id h2{
+        font-size: 25px;
+    }
+    #softwares_id h3{
+        font-size: 22px;
+    }
+    #softwares_id h4{
+        font-size: 22px;
+    }
+    #softwares_id h5{
+        font-size: 17px;
+    }
+    #softwares_id a{
+        font-size: 13px;
+        line-height: initial;
+    }
+    #softwares_id .row ul li{
+        text-indent: 20px;
+    }
+    #softwares_id .row p{
+        text-indent: 20px;
+    }
+
+    /*------------services-id-------*/
+    #services_id{
+        padding-top: 10px;
+    }
+    #services_id .row p{
+        font-size: 13px;
+    }
+    #services_id ul li{
+        font-size: 13px;
+    }
+    #services_id h2{
+        font-size: 25px;
+    }
+    #services_id h3{
+        font-size: 22px;
+    }
+    #services_id h4{
+        font-size: 17px;
+    }
+    #services_id a{
+        font-size: 13px;
+        line-height: initial;
+    }
+    #services_id .row ul li{
+        text-indent: 10px;
+        font-size: 13px;
+    }
+    #services_id .row p{
+        text-indent: 20px;
+    }
+
+    /*---------------feature-----------*/
+    #feature{
+        margin-top: 5px;
+    }
+    #feature h2{
+        font-size: x-large;
+    }
+    #feature .feature-flex h5{
+        font-size: small;
+    }
+    #feature .row h4{
+        font-size: medium;
+    }
+    #feature p{
+        margin-bottom: 0%;
+        font-size: 13px;
+    }
+    #feature .feature-flex > div{
+        width: auto;
+    }
+    #feature .feature-heading img{
+        width: 20px !important;
+    }
+    #feature .col-sm-6{
+        padding: 0px 5px;
+    }
+    #feature .row img{
+        width: 40px;
+        padding-bottom: 5px;
+    }
+    #feature .wrap-item{
+        padding: 0 10px;
+        height: max-content;
     }
 
     /*----------footer---------*/
-    #footer .row h4{
-        font-size: large;
-        font-weight: bold;
+    #footer .row h3{
+        font-size: 22px;
         margin-top: 10px;
     }
     #footer .row a{
-        font-size: small;
-        text-indent: 9px;
-        padding: 0px;
+        font-size: 13px;
+        text-indent: 8px;
     }
     #footer .row img{
         width: 100%;
     }
-    #footer .btn-link{
-        font-size: x-small;
-    }
     #footer .col-xs-3{
-        font-size: smaller;
+        font-size: 13px;
         width: 30%;
-        height: 30%;
-        padding: 0px;
+        text-align: end;
+        padding-right: 0px;
+        padding-left: 0px;
     }
     #footer .col-xs-9{
-        font-size: smaller;
+        font-size: 13px;
         width: 70%;
-        height: 70%;
-        padding: 0px;
     }
     #footer .col-xs-6{
         width: 50%;
-        padding: 0px;
     }
     #footer .col-md-3{
         border-left: none !important;
@@ -390,11 +397,19 @@
     #footer .col-md-4{
         border-left: none !important;
     }
+    #footer .col-sm-3{
+        text-align: center;
+    }
+    #footer .show{
+        padding: 10px 0px;
+    }
+    #footer .col-md-3 .fa{
+        font-size: 20px;
+    }
     #footer .copyright{
         letter-spacing: 0px;
-        padding-top: 0px;
-        padding-bottom: 10px;
-        font-size: smaller;
+        padding: 10px 0px;
+        font-size: 12px;
         text-align: center;
     }
 }

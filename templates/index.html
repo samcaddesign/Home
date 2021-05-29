@@ -42,16 +42,18 @@
 </section><br>
 <section id="services">
     <div class="parallax">
-        <div class="parallax-info">
-            <div class="parallax-style fadeInLeft">
-            <h2>Obligatory for our Clients</h2>
-            <ul>
-                <li><img style="width: 15px; margin-bottom: 4px;" src="../static/images/color_star.svg"> To improve Customer Loyalty.</li>
-                <li><img style="width: 15px; margin-bottom: 4px;" src="../static/images/color_star.svg"> Corporate Crisis.</li>
-                <li><img style="width: 15px; margin-bottom: 4px;" src="../static/images/color_star.svg"> Growth in Sales Revenue.</li>
-                <li><img style="width: 15px; margin-bottom: 4px;" src="../static/images/color_star.svg"> Stand out from the Competition.</li>
-                <li><img style="width: 15px; margin-bottom: 4px;" src="../static/images/color_star.svg"> To increase Brand Popularity.</li>
-            </ul>
+        <div class="container">
+            <div class="parallax-info">
+                <div class="parallax-style fadeInLeft">
+                <h2>Obligatory for our Clients</h2>
+                <ul>
+                    <li><img style="width: 15px; margin-bottom: 5px;" src="../static/images/color_star.svg"> To improve Customer Loyalty.</li>
+                    <li><img style="width: 15px; margin-bottom: 5px;" src="../static/images/color_star.svg"> Corporate Crisis.</li>
+                    <li><img style="width: 15px; margin-bottom: 5px;" src="../static/images/color_star.svg"> Growth in Sales Revenue.</li>
+                    <li><img style="width: 15px; margin-bottom: 5px;" src="../static/images/color_star.svg"> Stand out from the Competition.</li>
+                    <li><img style="width: 15px; margin-bottom: 5px;" src="../static/images/color_star.svg"> To increase Brand Popularity.</li>
+                </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -90,28 +92,28 @@
             <div><p><img src="../static/images/color_star.svg"> In addition to prompt technical support, we go an extra mile and help you make the right decisions, in case you need.</p></div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-3 col-sm-6">
                 <div class="wrap-item">
                     <div class="item-img"><img src="../static/images/ser01.png">
                     <h4 class="pad-bt15">Concept Work</h4></div>
                     <p>It usually begins with a review of functional requirements and performance metrics. We works closely with our client to ensure that the full design intent is captured and engineering considerations are incorporated at this early stage of development.</p>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-3 col-sm-6">
                 <div class="wrap-item text-center">
                     <div class="item-img"><img src="../static/images/ser02.png">
                     <h4 class="pad-bt15">Detailed Design</h4></div>
                     <p>Besides Conceptual work, Detailed design is often considered the most crucial stage in the design process. After general sizing and structural validation has been completed, localized regions in the project need to be examined and optimized.</p>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-3 col-sm-6">
                 <div class="wrap-item text-center">
                     <div class="item-img"><img src="../static/images/ser03.png">
                     <h4 class="pad-bt15">Cost Effective</h4></div>
                     <p>From verifying that the product is designed for the appropriate lifecycles to minimizing manufacturing costs, we can guide your product to success. Design, Drafting and Analysis will reduce your go-to-market</p>
                 </div>
             </div>
-            <div class="col-md-3 col-sm-12">
+            <div class="col-md-3 col-sm-6">
                 <div class="wrap-item text-center">
                     <div class="item-img"><img src="../static/images/ser04.png">
                     <h4 class="pad-bt15">Secure</h4></div>
@@ -125,14 +127,14 @@
     <div class="container">
         <div class="float">
             {% for data in values %}
-                <div class="center ag-box">
+                <div class="center">
                     <i class="{{data.image}} fa-5x" aria-hidden="true"></i><br><br>
                     <a>{{data.count}}<br>{{data.name}}</a><br><i style="color: #000080;">{{data.quote}}</i>
                 </div>
             {%endfor%}
         </div>
     </div>
-</section><br>
+</section>
 <section id="about">
     <div class="container">
         <div class="row">
@@ -148,5 +150,5 @@
             {%endfor%}
         </div>
     </div>
-</section><br>
+</section>
 {%endblock content%}  
