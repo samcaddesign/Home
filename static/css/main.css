@@ -5,7 +5,12 @@
 * {
     margin: 0;
     padding: 0;
-  }  
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 h1{
     padding-top: 10px;
     padding-bottom: 10px;
