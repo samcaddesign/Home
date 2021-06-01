@@ -109,9 +109,9 @@ def contact_view(request):
             fail_silently=False
         )
         send_mail(
-            'Customer request - '+ firstname + lastname,
-            number + need_value + message,
-            'munigopalakrishna@gmail.com',
+            'Customer request - '+firstname+' '+lastname,
+            number+' '+need_value+' '+message,
+            'info@samcaddesign.com',
             ['info@samcaddesign.com'],
             fail_silently=False
         )
