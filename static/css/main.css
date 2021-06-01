@@ -10,7 +10,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
+}
 h1{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -28,6 +28,7 @@ h2, h3, h4, h5{
 /*-----------header-------------*/
 #header {
     background: #20B2AA;
+    width: 100%;
 }
 #header img{
     width: auto;

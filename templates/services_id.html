@@ -25,7 +25,7 @@
     <section id="services_id">
         <div class="container">                
             <div class="row">
-                <div class="col-md-3 col-sm-3 ag-box fadeInLeft">
+                <div class="col-md-3 col-sm-3 ag-box" data-aos="slide-right">
                     <h3>Services</h3>
                     <div class="row p-0">
                         <div class="col-md-12">
@@ -37,31 +37,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9 col-sm-9 fadeInRight">
-                    <h2>{{name}}</h2>
-                    <p>{{description_1}}</p>
-                    <p>{{description_2}}</p>
-                    <p>{{description_3}}</p>
-                    <h4>{{head_1}}</h4>
+                <div class="col-md-9 col-sm-9">
+                    <h2 data-aos="slide-up">{{name}}</h2>
+                    <p data-aos="zoom-in">{{description_1}}</p>
+                    <p data-aos="zoom-in">{{description_2}}</p>
+                    <p data-aos="zoom-in">{{description_3}}</p>
+                    <h4 data-aos="slide-up">{{head_1}}</h4>
                     <ul>
                         {% for head_1_info in head_1_info %}
-                            <li><i class="fa fa-gear" aria-hidden="true"></i> {{head_1_info}}</li>
+                            <li data-aos="zoom-in"><i class="fa fa-gear" aria-hidden="true"></i> {{head_1_info}}</li>
                         {%endfor%}
                     </ul>
                     <div class="row">                            
-                        <div class="col-md-6 col-xs-12">
+                        <div class="col-md-6 col-xs-12" data-aos="zoom-in">
                             <a><img src="{{image_1.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
                         </div>
                         {% if image_active %}
-                        <div class="col-md-6 col-xs-12">
+                        <div class="col-md-6 col-xs-12" data-aos="zoom-in">
                             <a><img src="{{image_2.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
                         </div>
                         {%endif%}
                     </div><br>
-                    <h4>{{head_2}}</h4>
+                    <h4 data-aos="slide-up">{{head_2}}</h4>
                     <ul>
                         {% for head_2_info in head_2_info %}
-                            <li><i class="fa fa-star" aria-hidden="true"></i> {{head_2_info}}</li>
+                            <li data-aos="zoom-in"><i class="fa fa-star" aria-hidden="true"></i> {{head_2_info}}</li>
                         {%endfor%}
                     </ul>
                 </div>

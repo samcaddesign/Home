@@ -6,9 +6,9 @@
     <div class="container">
         <div class="float">
             <div class="left">
-                <h2>Let, start here !</h2>
-                <p>Requirement of High Quality CAD/CAM Services and thinking upon the upcoming design project..!</p>
-                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'contact' %}'">Get here Quote</button>
+                <h2 data-aos="fade-right">Let, start here !</h2>
+                <p data-aos="fade-left">Requirement of High Quality CAD/CAM Services and thinking upon the upcoming design project..!</p>
+                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'contact' %}'" data-aos="zoom-in">Get here Quote</button>
             </div>
             <div class="right">
                 <img class="d-block w-100" src="../static/images/agreement.png" alt="carousel"></img>
@@ -25,15 +25,15 @@
     <div class="container">
         {% for data in about %}
         <div class="row">
-            <div class="col-md-7 col-sm-12 fadeInLeft">
-                <h2>Experience superior services forever</h2>
+            <div class="col-md-7 col-sm-12">
+                <h2 data-aos="slide-down">Experience superior services forever</h2>
                 {% for description_1 in data.description_1 %}
-                    <p>{{description_1}}</p>
+                    <p data-aos="zoom-in">{{description_1}}</p>
                 {%endfor%}
-                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'aboutus' %}'">Know more</button>&nbsp; &nbsp; &nbsp; &nbsp;
-                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'contact' %}'">Contact Us</button>
+                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'aboutus' %}'" data-aos="zoom-in">Know more</button>&nbsp; &nbsp; &nbsp; &nbsp;
+                <button type="button" class="btn btn-primary" onclick="location.href='{% url 'contact' %}'" data-aos="zoom-in">Contact Us</button>
             </div>
-            <div class="col-md-5 col-sm-12 fadeInRight">
+            <div class="col-md-5 col-sm-12" data-aos="flip-right">
                 <img class="d-block w-100" src="../static/images/myclient.png" alt="mission-vision"></img>
             </div>
         </div>
@@ -44,7 +44,7 @@
     <div class="parallax">
         <div class="container">
             <div class="parallax-info">
-                <div class="parallax-style fadeInLeft">
+                <div class="parallax-style fadeInLeft" data-aos="zoom-out">
                 <h2>Obligatory for our Clients</h2>
                 <ul>
                     <li><img style="width: 15px; margin-bottom: 5px;" src="../static/images/color_star.svg"> To improve Customer Loyalty.</li>
@@ -58,14 +58,14 @@
         </div>
     </div>
     <div class="container">
-        <div class="services-heading">
+        <div class="services-heading" data-aos="zoom-in">
             <h2>Our Services</h2>
             <i>"Our Team can only be ensured by customer needs & satisfaction."</i>
         </div>
         <div class="row">
             {% for data in services %}
                 {%if data.services_active%}
-                <div class="col-md-3 col-xs-6 box">
+                <div class="col-md-3 col-xs-6 box" data-aos="zoom-in">
                     <div class="img-box">
                         <a href="{% url 'services_id' data.name %}">
                             <img src="{{data.thumb_image.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
@@ -80,13 +80,13 @@
 </section>
 <section id="feature">
     <div class="container">
-        <div class="feature-heading">
+        <div class="feature-heading" data-aos="zoom-in">
             <h2>Why need us?</h2>
             <h6><img style="width: 50px; margin-right: 10px;" src="../static/images/quate.svg"> 
                 Profit is indispensable for growth but it must be achieved by <b>Quality Prioritization</b>. 
                 <img style="width: 50px; transform: rotate(180deg); margin-left: 10px;" src="../static/images/quate.svg"></h6>
         </div>
-        <div class="feature-flex">
+        <div class="feature-flex" data-aos="zoom-in">
             <div><p><img src="../static/images/color_star.svg"> The astounding look-and-feel of our digital content ensures that you are always at a competitive advantage in the market.</p></div>
             <div><p><img src="../static/images/color_star.svg"> Our affordable yet premium services help you focus on scaling your core business without compromising on existing one.</p></div>
             <div><p><img src="../static/images/color_star.svg"> In addition to prompt technical support, we go an extra mile and help you make the right decisions, in case you need.</p></div>
@@ -94,30 +94,30 @@
         <div class="row">
             <div class="col-md-3 col-sm-6">
                 <div class="wrap-item">
-                    <div class="item-img"><img src="../static/images/ser01.png">
+                    <div class="item-img" data-aos="flip-right"><img src="../static/images/ser01.png">
                     <h4 class="pad-bt15">Concept Work</h4></div>
-                    <p>It usually begins with a review of functional requirements and performance metrics. We works closely with our client to ensure that the full design intent is captured and engineering considerations are incorporated at this early stage of development.</p>
+                    <p data-aos="zoom-in">It usually begins with a review of functional requirements and performance metrics. We works closely with our client to ensure that the full design intent is captured and engineering considerations are incorporated at this early stage of development.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="wrap-item text-center">
-                    <div class="item-img"><img src="../static/images/ser02.png">
+                    <div class="item-img" data-aos="flip-right"><img src="../static/images/ser02.png">
                     <h4 class="pad-bt15">Detailed Design</h4></div>
-                    <p>Besides Conceptual work, Detailed design is often considered the most crucial stage in the design process. After general sizing and structural validation has been completed, localized regions in the project need to be examined and optimized.</p>
+                    <p data-aos="zoom-in">Besides Conceptual work, Detailed design is often considered the most crucial stage in the design process. After general sizing and structural validation has been completed, localized regions in the project need to be examined and optimized.</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="wrap-item text-center">
-                    <div class="item-img"><img src="../static/images/ser03.png">
+                    <div class="item-img" data-aos="flip-right"><img src="../static/images/ser03.png">
                     <h4 class="pad-bt15">Cost Effective</h4></div>
-                    <p>From verifying that the product is designed for the appropriate lifecycles to minimizing manufacturing costs, we can guide your product to success. Design, Drafting and Analysis will reduce your go-to-market</p>
+                    <p data-aos="zoom-in">From verifying that the product is designed for the appropriate lifecycles to minimizing manufacturing costs, we can guide your product to success. Design, Drafting and Analysis will reduce your go-to-market</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6">
                 <div class="wrap-item text-center">
-                    <div class="item-img"><img src="../static/images/ser04.png">
+                    <div class="item-img" data-aos="flip-right"><img src="../static/images/ser04.png">
                     <h4 class="pad-bt15">Secure</h4></div>
-                    <p>We give the utmost importance to our customers' confidential data, to ensure that all client data and information sent to us is secure. All our facilities have controlled access entry points, and information is shared on a need-to-know basis with authorized personnel only.</p>
+                    <p data-aos="zoom-in">We give the utmost importance to our customers' confidential data, to ensure that all client data and information sent to us is secure. All our facilities have controlled access entry points, and information is shared on a need-to-know basis with authorized personnel only.</p>
                 </div>
             </div>
         </div>
@@ -127,7 +127,7 @@
     <div class="container">
         <div class="float">
             {% for data in values %}
-                <div class="center">
+                <div class="center" data-aos="zoom-in">
                     <i class="{{data.image}} fa-5x" aria-hidden="true"></i><br><br>
                     <a>{{data.count}}<br>{{data.name}}</a><br><i style="color: #000080;">{{data.quote}}</i>
                 </div>
@@ -137,7 +137,7 @@
 </section>
 <section id="about">
     <div class="container">
-        <div class="row">
+        <div class="row" data-aos="zoom-in">
             {% for data in about %}
             <div class="col-md-6 col-sm-12">
                 <h2>Mission</h2>

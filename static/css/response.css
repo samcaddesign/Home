@@ -124,14 +124,14 @@
         padding: 0.5em;
     }
     #header .company-name{
-        width: 75%;
+        width: 70%;
     }
     #header .navbar-toggler{
         padding: 0px;
     }
     #header .navbar-toggler img{
-        width: 70%;
-        height: 70%;
+        width: 60%;
+        height: 60%;
     }
 
     /*----------marquee----------*/

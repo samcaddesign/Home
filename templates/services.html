@@ -25,7 +25,7 @@
                 <div class="row">
                     {% for data in services %}
                         {%if data.services_active%}
-                        <div class="col-md-3 col-xs-6 box">
+                        <div class="col-md-3 col-xs-6 box" data-aos="zoom-in">
                             <div class="img-box">
                                 <a href="{% url 'services_id' data.name %}">
                                     <img src="{{data.thumb_image.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">

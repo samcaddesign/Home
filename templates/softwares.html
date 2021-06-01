@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row">
                 {% for data in softwares %}
-                    <div class="col-md-2 col-sm-6 box">
+                    <div class="col-md-2 col-sm-6 box" data-aos="zoom-in">
                         <div class="img-box">
                             <a href="{% url 'softwares_id' data.name %}">
                                 <img src="{{data.logo.url}}" alt="{{data.name}}" class="img-responsive" title="{{data.name}}">
@@ -33,7 +33,7 @@
                     </div>
                 {%endfor%}
             </div>
-            <p style="font-family: monospace; text-align: justify;"><strong>Disclaimer : </strong>
+            <p style="font-family: monospace; text-align: justify;" data-aos="zoom-in"><strong>Disclaimer : </strong>
                 <i>All product and company names are trademarks™ or registered® trademarks of their 
                 respective holders. Use of these product and company names on this page does not imply any endorsement or our 
                 affiliation with them. All the mentions only imply that our services are compliant to the above-listed products 

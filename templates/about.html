@@ -7,7 +7,7 @@
     <div class="container">
         <div class="float">
             <div class="left">
-                <h2>Aboutus</h2>
+                <h2 data-aos="zoom-in">Aboutus</h2>
             </div>
             <div class="right">
                 <img class="d-block w-100" src="../static/images/signature.png" alt="carousel"></img>
@@ -24,24 +24,24 @@
     <div class="container">
         {% for data in about %}
             <div class="row">
-                <div class="col-md-7 col-sm-12 fadeInLeft">
-                    <h2>We are SAM Groups</h2>
+                <div class="col-md-7 col-sm-12">
+                    <h2 data-aos="slide-down">We are SAM Groups</h2>
                     {% for description_1 in data.description_1 %}
-                        <p>{{description_1}}</p>
+                        <p data-aos="zoom-in">{{description_1}}</p>
                     {%endfor%}
                 </div>
-                <div class="col-md-5 col-sm-12 fadeInRight">
+                <div class="col-md-5 col-sm-12" data-aos="zoom-in">
                     <img class="d-block w-100" src="../static/images/discussions.png" alt="mission-vision"></img>
                 </div>
             </div>
             <div class="row float">
-                <div class="col-md-5 col-sm-12 fadeInLeft">
+                <div class="col-md-5 col-sm-12" data-aos="slide-right">
                     <img class="d-block w-100" src="../static/images/satisfication.png" alt="mission-vision"></img>
                 </div>
-                <div class="col-md-7 col-sm-12 fadeInRight">
-                    <h2>Why us</h2>
+                <div class="col-md-7 col-sm-12">
+                    <h2 data-aos="slide-down">Why us</h2>
                     {% for description_2 in data.description_2 %}
-                        <p>{{description_2}}</p>
+                        <p data-aos="zoom-in">{{description_2}}</p>
                     {%endfor%}
                 </div>
             </div>
@@ -53,16 +53,16 @@
         <div class="row">
             {% for data in about %}
             <div class="col-md-7 col-sm-12">
-                <h2>Maxim of our Team</h2>
+                <h2 data-aos="slide-up">Maxim of our Team</h2>
                 {% for description_3 in data.description_3 %}
-                    <p>{{description_3}}</p>
+                    <p data-aos="zoom-in">{{description_3}}</p>
                 {%endfor%}
-                <h2>Confidentiality: Imperative</h2>
+                <h2 data-aos="slide-up">Confidentiality: Imperative</h2>
                 {% for description_4 in data.description_4 %}
-                    <p>{{description_4}}</p>
+                    <p data-aos="zoom-in">{{description_4}}</p>
                 {%endfor%}
             </div>
-            <div class="col-md-5 col-sm-12">
+            <div class="col-md-5 col-sm-12" data-aos="slide-left">
                 <img class="d-block w-100" src="../static/images/security.png" alt="security"></img>
             </div>            
             {%endfor%}
@@ -73,11 +73,11 @@
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <div id="swiper" class="skills-bar">
-                <h2>Working in with Customers</h2>
+                <h2 data-aos="slide-up">Working in with Customers</h2>
                 {% for data in services %}
                 {% if data.services_active %}
-                    <h6>{{data.name}}</h6>
-                    <div class="progress">
+                    <h6 data-aos="slide-up">{{data.name}}</h6>
+                    <div class="progress" data-aos="zoom-in">
                         <div class="progress-bar" style="width: {{data.percentage}};">{{data.percentage}}</div>
                     </div>
                 {%endif%}
@@ -91,8 +91,8 @@
                     <div class="swiper-wrapper">
                         {% for data in members %}
                         <div class="swiper-slide">
-                            <div class="img-box"><img class="d-block w-100" src="{{data.image.url}}" alt="male-profile"></div><br>
-                            <div class="info">
+                            <div class="img-box" data-aos="zoom-in"><img class="d-block w-100" src="{{data.image.url}}" alt="male-profile"></div><br>
+                            <div class="info" data-aos="zoom-in">
                                 <h5>{{data.name}}</h5>
                                 <h6 style="color: #000080; letter-spacing: 1px;"><em><b>{{data.profile}}</b></em><h6>
                                 <h6>{{data.designation}}</h6>
@@ -119,17 +119,17 @@
     <div class="container">
         {% for data in about %}
         <div class="row">
-            <div class="col-md-4 col-sm-12">
+            <div class="col-md-4 col-sm-12" data-aos="zoom-in">
                 <img class="d-block" src="../static/images/mission-vision.png" alt="mission-vision"></img>
             </div>
-            <div class="col-md-8 col-sm-12">
+            <div class="col-md-8 col-sm-12" data-aos="zoom-in">
                 <h2>Mission</h2>
                 <p>{{data.mission}}</p>
                 <h2>Vision</h2>
                 <p>{{data.vision}}</p>
             </div>
         </div>
-        <div style="font-family: monospace; text-align: justify;">
+        <div style="font-family: monospace; text-align: justify;" data-aos="zoom-in">
             <a style="text-decoration: underline;">​<em>Legal Disclaimer:</em></a>
             <a><em>​ {{data.disclaimer}}</em></a>
         </div>

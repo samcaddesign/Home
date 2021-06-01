@@ -25,7 +25,7 @@
     <section id="softwares_id">
         <div class="container">            
             <div class="row">
-                <div class="col-md-3 col-sm-3 ag-box fadeInLeft">
+                <div class="col-md-3 col-sm-3 ag-box" data-aos="slide-right">
                     <h3>Softwares</h3>
                     <div class="row p-0">
                         <div class="col-md-12">
@@ -37,37 +37,37 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-9 col-sm-9 fadeInRight">
-                    <h2>{{name}}</h2>
+                <div class="col-md-9 col-sm-9">
+                    <h2 data-aos="slide-up">{{name}}</h2>
                     <div class="row p-0">
                         <div class="col-md-9 col-xs-12">
-                            <p>{{description_1}}</p>
+                            <p data-aos="zoom-in">{{description_1}}</p>
                         </div>
-                        <div class="col-md-3 col-xs-12" style="text-align: center;">
+                        <div class="col-md-3 col-xs-12" style="text-align: center;" data-aos="slide-left">
                             <a><img src="{{logo.url}}" alt="{{name}}"></a>
                         </div>
                     </div>
-                    <p>{{description_2}}</p>
-                    <p>{{description_3}}</p>
+                    <p data-aos="zoom-in">{{description_2}}</p>
+                    <p data-aos="zoom-in">{{description_3}}</p>
                     <div class="row">                            
-                        <div class="col-md-6 col-xs-12">
+                        <div class="col-md-6 col-xs-12" data-aos="zoom-in">
                             <a><img src="{{image_1.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
                         </div>
                         {% if image_active %}
-                        <div class="col-md-6 col-xs-12">
+                        <div class="col-md-6 col-xs-12" data-aos="zoom-in">
                             <a><img src="{{image_2.url}}" class="w-100 py-3" alt="{{name}}"></img></a>
                         </div>
                         {%endif%}
                     </div>
-                    <p>{{description_4}}</p>
-                    <h4>Features & Objectives :</h4>                        
+                    <p data-aos="zoom-in">{{description_4}}</p>
+                    <h4 data-aos="slide-up">Features & Objectives :</h4>                        
                     <div class="inline">
                         {% for data in head %}
                         <div class="float">
-                            <h5>{{data.head}}</h5>
+                            <h5 data-aos="slide-up">{{data.head}}</h5>
                             <ul>
                                 {% for content in data.content %}
-                                <li>{{content}}</li>
+                                <li data-aos="zoom-in">{{content}}</li>
                                 {%endfor%}
                             </ul>
                         </div>
