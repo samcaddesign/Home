@@ -1,8 +1,14 @@
-from django.shortcuts import render
-from .models import need, services, values, contact, softwares, features, company, members, aboutus, header
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import need, services, user_profile, values, contact, softwares, features, company, members, aboutus, header
 from django.core.mail import send_mail
 from django.conf import settings
-from django.http import HttpResponse
+from django.contrib.auth.forms import User
+from django.contrib.auth.models import auth
+from django.contrib.auth.models import User 
+from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth import logout
+from django.contrib.auth import authenticate,login
 
 def about_view(request):
     instance = aboutus.objects.all()
@@ -194,6 +200,7 @@ def services_view(request):
 
 
 def home_view(request):
+    print(request.user)
     instance_1 = services.objects.all()
     instance_2 = softwares.objects.all()
     instance_3 = company.objects.all()
@@ -227,3 +234,59 @@ def base_view(request):
         'title': ""
     }
     return render(request, "base.html", context)
+
+def profile_view(request):
+    if request.method=="POST":
+        Firstname  =request.POST['Firstname']
+        Lastname = request.POST['Lastname']
+        Email = request.POST['Email']
+        Username = request.POST['Username']
+        Password  = request.POST['Password']
+        phone_number = request.POST['phone_number']
+        print(Firstname,Lastname,Email,Password)
+        user= User.objects.create(first_name=Firstname, last_name=Lastname, email=Email,username=Username, password=Password)
+        user.set_password(user.password)
+        user.save()
+        user_instance=User.objects.get(username=Username)
+        profile=user_profile.objects.create(user_id=user_instance, phone_number=phone_number)
+        profile.save()
+        return redirect('/login')
+    else:
+        return render(request, 'register.html') 
+ 
+def login_view(request):
+    if request.method == 'POST':
+        username  = request.POST['username']
+        password  = request.POST['password']
+        user = auth.authenticate(username=username, password=password) 
+        print("happy")
+        print(username,password)
+        print(user)
+        if user is not None:
+            print("inside if statement of user")
+            auth.login(request, user)
+            # messages.success(request, f"Login successful as {user.username}")
+            return redirect('home')
+        else:
+            messages.error(request,'username / password Incorrect')
+            return render(request,"login.html")
+            
+    else:
+        return render(request,"login.html")
+
+def p_view(request):
+    return render(request,'profile.html')
+
+def logout_view(request):
+    try:
+        auth.logout(request)
+        return redirect('home')
+    except:
+        pass
+
+
+    # try:
+    #     del request.session['user']
+    # except:
+    #     return redirect('home')
+    # return redirect('home')

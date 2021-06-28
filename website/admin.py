@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import need, contact, services, header, softwares, values, marquee, carousel, aboutus, features, company, members
+from .models import need, contact, services, header, softwares, values, marquee, carousel, aboutus, features, company, members, user_profile
 
 admin.site.register(need)
 admin.site.register(contact)
@@ -14,4 +14,4 @@ admin.site.register(aboutus)
 admin.site.register(features)
 admin.site.register(company)
 admin.site.register(members)
-
+admin.site.register(user_profile)

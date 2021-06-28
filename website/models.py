@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.forms import User
 
 class company (models.Model):
     name = models.CharField(max_length=15)
@@ -141,3 +142,9 @@ class contact (models.Model):
         return self.first_name
 
 
+class user_profile(models.Model):
+    user_id = models.ForeignKey(User, on_delete = models.CASCADE, default=None)
+    phone_number = models.CharField(max_length=50)
+    
+    def __str__(self):
+        return f'{self.phone_number}'

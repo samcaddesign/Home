@@ -1,7 +1,7 @@
 
 from django.contrib import admin
 from django.urls import path
-from website.views import about_view, services_view, serivces_id, contact_view, softwares_view, softwares_id, home_view, base_view
+from website.views import * 
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -14,5 +14,10 @@ urlpatterns = [
     path('softwares', softwares_view, name="softwares"),
     path('softwares/<str:softwareName>', softwares_id, name="softwares_id"),
     path('', home_view, name="home"),
-    path('base', base_view, name="base")
+    path('base', base_view, name="base"),
+    path('home', home_view, name="home"),
+    path('login',login_view, name="login"),
+    path('register',profile_view, name="register"),
+    path('profile',p_view, name="profile"),
+    path('logout',logout_view,name="logout"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
