@@ -546,6 +546,9 @@ h2, h3, h4, h5{
     overflow: hidden;
     height: 370px;
 }
+#feature .wrap-item p{    
+    padding: 0 5px;
+}
 #feature .row .item-img{
     padding-top: 15px;
     background-color: aliceblue;
@@ -565,6 +568,17 @@ h2, h3, h4, h5{
 }
 #feature .feature-flex > div:nth-last-child(1){
     width: 100%;
+}
+#feature .flex{
+    display: inline-flex;
+    place-content: center;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+#feature .flex img{
+    width: 10%;
+    padding: 20px 10px;
 }
 
 /*---------------scrolldown-------------*/

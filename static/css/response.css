@@ -1,4 +1,4 @@
-@media only screen and (max-width:425px){
+@media only screen and (max-width:541px){
     
     /*--------slider-----------*/
     #slider .float{        
@@ -74,13 +74,10 @@
         font-size: 12px;
     }    
     #feature .wrap-item{
-        border: none;
-        border-radius: 0px;
-        margin-bottom: 10px;
         height: fit-content;
     }
-    #feature .container .col-sm-6{        
-        border-bottom: 1px solid #000080;
+    #feature .col-md-3{
+        margin: 10px 5px;
     }
     
     /*--------swiper----------*/    
@@ -357,16 +354,15 @@
     #feature .feature-heading img{
         width: 20px !important;
     }
-    #feature .col-sm-6{
-        padding: 0px 5px;
-    }
     #feature .row img{
         width: 40px;
         padding-bottom: 5px;
     }
     #feature .wrap-item{
-        padding: 0 10px;
         height: max-content;
+    }
+    #feature .flex img{
+        width: 20%;
     }
 
     /*----------footer---------*/
