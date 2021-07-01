@@ -26,38 +26,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                {% for data in company %}
-                <div class="appear-animation" data-aos="zoom-in">
-                    <h2>Registered Address</h2>
-                    <div class="row p-0">
-                        <div class="col-md-3 col-sm-3"><i class="fa fa-map-marker top-6"></i> <strong class="text-dark">Office:</strong></div>
-                        <div class="col-md-9 col-sm-9">Vallalar Street, Newpet,<br> Krishnagiri, Tamil Nadu - 635 001.</div>
-                        <div class="col-md-3 col-sm-3"><i class="fa fa-phone top-6"></i> <strong class="text-dark">Phone:</strong></div>
-                        <div class="col-md-9 col-sm-9"><a href="tel:{{data.mobile}}">{{data.mobile}}</a></div>
-                        <div class="col-md-3 col-sm-3"><i class="fa fa-skype"></i> <strong class="text-dark">Skype:</strong></div>
-                        <div class="col-md-9 col-sm-9">{{data.skypeid}}.</div>
-                        <div class="col-md-3 col-sm-3"><i class="fa fa-envelope top-6"></i> <strong class="text-dark">Email:</strong></div>
-                        <div class="col-md-9 col-sm-9"><a href="mailto:{{data.mailid}}">{{data.mailid}}</a></div>
-                    </div>
-                </div>
-                <div class="business-hours" data-aos="zoom-in">
-                    <h2>Business Hours</h2>
-                    <i class="fa fa-clock-o top-6"></i> Monday to Friday - 10am to 6pm<br>
-                    <i class="fa fa-clock-o top-6"></i> Saturday - 10am to 4pm<br>
-                    <i class="fa fa-clock-o top-6"></i> Sunday - Mostly unavailable<br>
-                </div><br>
-                <div class="embed-responsive embed-responsive-21by9 mb-4" data-aos="zoom-in">
-                    <iframe src="{{data.location}}"  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
-                </div>
-                {%endfor%}
-            </div>
-            <div class="col-md-6">
-                <div class="overflow-hidden" data-aos="slide-up"><h2>Contact Us</h2></div>
+                <div class="overflow-hidden" data-aos="slide-right"><h2>Contact Us</h2></div>
                 {% if first_name %}
                 <center>
-                <div class="thankyou_message">
+                <div class="thankyou_message" data-aos="zoom-in">
                     <h3 style="text-align: center;">Hai, {{first_name}}</h3>
-                    <p>We receive your request and will repond shortly..!</p>
+                    <p>We received your request and will respond to you shortly..!</p>
                     <img class="w-50" src="../static/images/contact.png" alt="Contact">
                     <h4 style="text-align: center;"><em>Thanks for contacting us..!</em></h4>
                     <a href="{% url 'contact' %}">Click here</a> to redirect
@@ -66,9 +40,9 @@
                 {% else %}
                 <div class="container-fluid" data-aos="zoom-in">
                     <div class="overflow-hidden pt-3" style="text-align: center;">
-                        <center style="color: #20B2AA;"><i><b>Hi, there. Feel free to say your need us</b></i></center>
+                        <center style="color: #000080;"><i><b>Hi, there. Feel free to say your need us</b></i></center>
                         <i>Simply, fill up the following form and this has been received directly by the admin head. 
-                            We will contact you within <b style="color: #20B2AA;">24 hours</b></i>
+                            We will contact you within <b style="color: #000080;">24 hours</b></i>
                     </div>
                     <form id="contact-form" method="POST" class="gform pure-form pure-form-stacked py-3">
                     {%csrf_token%}
@@ -115,6 +89,32 @@
                     </form>
                 </div>
                 {% endif %}
+            </div>
+            <div class="col-md-6">
+                {% for data in company %}
+                <div class="appear-animation">
+                    <h2 data-aos="slide-left">Registered Address</h2>
+                    <div class="row p-0" data-aos="zoom-in">
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-map-marker top-6"></i> <strong class="text-dark">Office:</strong></div>
+                        <div class="col-md-9 col-sm-9">Vallalar Street, Newpet,<br> Krishnagiri, Tamil Nadu - 635 001.</div>
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-phone top-6"></i> <strong class="text-dark">Phone:</strong></div>
+                        <div class="col-md-9 col-sm-9"><a href="tel:{{data.mobile}}">{{data.mobile}}</a></div>
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-skype"></i> <strong class="text-dark">Skype:</strong></div>
+                        <div class="col-md-9 col-sm-9">{{data.skypeid}}.</div>
+                        <div class="col-md-3 col-sm-3"><i class="fa fa-envelope top-6"></i> <strong class="text-dark">Email:</strong></div>
+                        <div class="col-md-9 col-sm-9"><a href="mailto:{{data.mailid}}">{{data.mailid}}</a></div>
+                    </div>
+                </div>
+                <div class="business-hours" data-aos="zoom-in">
+                    <h2>Business Hours</h2>
+                    <i class="fa fa-clock-o top-6"></i> Monday to Friday - 10am to 6pm<br>
+                    <i class="fa fa-clock-o top-6"></i> Saturday - 10am to 4pm<br>
+                    <i class="fa fa-clock-o top-6"></i> Sunday - Mostly unavailable<br>
+                </div><br>
+                <div class="embed-responsive embed-responsive-21by9 mb-4" data-aos="zoom-in">
+                    <iframe src="{{data.location}}" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" frameborder="0"></iframe>
+                </div>
+                {%endfor%}
             </div>
         </div>
     </div>
