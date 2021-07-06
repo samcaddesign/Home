@@ -177,6 +177,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
+                                    <label>Gender</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>{{gender}}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
                                     <label>Email</label>
                                 </div>
                                 <div class="col-md-6">
@@ -196,7 +204,7 @@
                                     <label>Phone</label>
                                 </div>
                                 <div class="col-md-6">
-                                    <p>{{request.user.phone_number}}</p>
+                                    <p>{{phone}}</p>
                                 </div>
                             </div>
                             <a href="{% url 'home' %}">Back</a>

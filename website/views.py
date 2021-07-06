@@ -243,12 +243,13 @@ def profile_view(request):
         Username = request.POST['Username']
         Password  = request.POST['Password']
         phone_number = request.POST['phone_number']
-        print(Firstname,Lastname,Email,Password)
+        gender=request.POST['gender']
+        print(Firstname,Lastname,Email,Password,gender)
         user= User.objects.create(first_name=Firstname, last_name=Lastname, email=Email,username=Username, password=Password)
         user.set_password(user.password)
         user.save()
         user_instance=User.objects.get(username=Username)
-        profile=user_profile.objects.create(user_id=user_instance, phone_number=phone_number)
+        profile=user_profile.objects.create(user_id=user_instance, phone_number=phone_number,gender=gender)
         profile.save()
         return redirect('/login')
     else:
@@ -275,7 +276,16 @@ def login_view(request):
         return render(request,"login.html")
 
 def p_view(request):
-    return render(request,'profile.html')
+    selectProfileObject=user_profile.objects.get(user_id=request.user.pk)
+    # print("obfgf:",selectProfileObject.phone_number)
+    context={
+        "phone":selectProfileObject.phone_number,
+        "gender":selectProfileObject.gender
+    }
+    return render(request,'profile.html',context)
+
+# def profileEdit_view(request):
+#     return render(request,'profileEdit.html')
 
 def logout_view(request):
     try:
